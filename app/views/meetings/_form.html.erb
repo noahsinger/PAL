@@ -1,0 +1,34 @@
+<%= form_for(@meeting) do |f| %>
+  <% if @meeting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+
+      <ul>
+      <% @meeting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :section_id %>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <label for="location_name">Location name:</label>
+    <input type="text" name="location[name]" id="location_name"/>
+    <input type="hidden" name="location[lat]" id="location_lat"/>
+    <input type="hidden" name="location[lng]" id="location_lng"/>
+  </div>
+  <div id="map_canvas"></div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

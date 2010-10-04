@@ -1,0 +1,476 @@
+/////////////////////////////////////////////////////////
+// default 960 - 15 column view
+
+	.narrow {
+		width: 950px; //width - 10 so no gutter on last column
+		margin: 0 auto;
+	}
+
+	// THE HEADER
+	header {		
+		height: 140px;
+		
+		#logo {
+			margin-top: 7px;
+			position: relative;
+			z-index: 10;
+			
+			img {
+				width: 155px;
+				height: 155px;
+			}
+		}
+		
+		
+		h1 {
+			font-family: QuicksandLight, Arial, sans-serif;
+			font-size: 3.7em;
+			line-height: 1em;
+			margin-top: 40px;
+		}
+		
+		#bouy {
+			img {
+				position: relative;
+				margin-top: 125px;
+				z-index: 10;
+			}
+		}
+		
+		#header_forms {
+			margin-top: 70px;
+			
+			form {
+				margin-top: 1px;
+
+				background-color: rgba(255,255,255,.2);
+				padding: 3px;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+
+				text-align: center;
+
+				input {
+					border-radius: 5px;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border: 1px solid #fff;
+
+					width: 90%;
+
+					padding: 2px 3px;
+				}
+			}
+		}
+	}
+	
+	//THE FLASH
+	#flash {
+		margin: 0 0 10px 0;
+		min-height: 27px;
+		position: relative;
+		z-index: 0;
+		
+		.flash {
+			display: none;
+			color: #fff;
+			font-size: 15px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			
+			border-bottom-right-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			-moz-border-radius-bottomright: 10px;
+		}
+		
+		#notice {
+//			background-color: #6C0;
+			background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(102,204,0,.8)),color-stop(.5, rgba(102,255,0,.8)));
+			background-image:	-moz-linear-gradient(center top, rgba(102,204,0,.8) 0%, rgba(102,255,0,.8) 80%);
+		}
+		
+		#alert {
+//			background-color: #f00;
+			background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(153,0,0,.8)),color-stop(.5, rgba(255,0,0,.8)));
+			background-image:	-moz-linear-gradient(center top, rgba(153,0,0,.8) 0%, rgba(255,0,0,.8) 80%);
+		}
+	}
+	
+#search_subscribe {
+	display: none;
+	
+	.search_subscribe {
+		form {
+			background-color: rgba(255,255,255,.2);
+			padding: 5px 10px;
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			
+			input[type="text"] {
+				padding: 5px 3px;
+				width: 420px;
+				font-size: 15px;
+				border: 0;
+			}
+			
+			input[type="submit"] {
+				position: relative;
+				top: 0px;
+				background-color: transparent;
+				border: 0;
+				color: #fff;
+				font-size: 15px;
+			}
+		}
+		
+		form:after {
+			content: ".";
+		  display: block;
+		  height: 0;
+		  clear: both;
+		  visibility: hidden;
+		}
+	}
+}
+	
+#content {
+	section, nav {
+		margin-top: 10px;
+	}
+	
+	h1 {
+		padding-top: 20px;
+		
+		position: relative;
+		top: 10px;
+		
+		font-size: 20px;
+		font-family: 'ChunkFiveRegular', Arial, sans-serif;
+		text-shadow: 2px 4px 7px #222;
+	}
+	
+	.scuba_nav {		
+		h1 {
+			color: #E6B519;
+			border-top: 6px solid #E6B519;
+			padding-left: 10px;
+		}
+		
+		ul {
+			background-image: url(../images/yellow_bg.png);	
+			list-style: none;
+			
+			.header {
+				font-family: 'ChunkFiveRegular', Arial, sans-serif;
+				font-style: italic;
+				font-size: 15px;
+				color: #E6B519;
+				padding: 20px 10px 0px 10px;
+			}
+			
+			li {
+			
+				padding: 5px 5px 0px 10px;
+				
+				a {
+					color: #fff;
+					font-size: 15px;
+					text-decoration: none;
+					font-weight: normal;
+				}
+			}
+		}
+		
+ 		ul:nth-child(4) {
+			padding-bottom: 20px;
+		}
+						
+		img {
+			margin-top: 20px;
+		}
+	}
+	
+	#main_content {		
+		padding-bottom: 30px;
+		
+		h1 {
+			font-size: 40px;
+			padding-left: 20px;
+			color: #fff;
+			border-top: 5px solid #fff;
+		}
+		
+		p {
+			padding: 0px 20px 20px 20px;
+			background-image: url(../images/white_bg.png);
+		}
+		
+		p:nth-child(3) {
+			padding-top: 30px;
+		}
+		
+		#contact_info {
+			border-top: 5px solid #fff;
+			padding-top: 30px;
+			padding-bottom: 25px;
+						
+			article[itemtype="http://data-vocabulary.org/Organization"] {
+				background-image: url(../images/white_bg.png);
+				padding: 10px 0;
+				float: left;
+				
+				h1 {
+					display: none;
+				}
+				
+				p {
+					padding: 0;
+					color: #ccc;
+					font-size: 11px;
+					background-image: none;
+					position: relative;
+					top: 2px;
+					z-index: 1;
+				}
+				
+				p:after {
+					content: ".";
+				  display: block;
+				  height: 0;
+				  clear: both;
+				  visibility: hidden;
+				}
+
+				p[itemprop="address"] {
+					float: left;
+					padding-left: 20px;
+
+					span[itemprop="street-address"] {
+					}
+
+					span[itemprop="locality"] {
+					}
+
+					span[itemprop="region"] {
+					}
+
+					span[itemprop="postal-code"] {
+						margin-right: 10px;
+					}
+
+					span[itemprop="country-name"] {
+						display: none;
+					}
+				}
+
+				p[itemprop="tel"] {
+					float: left;
+				}
+
+				a[itemprop="url"] {
+					display: none;
+				}
+
+				.links {
+					float: right;
+					padding-right: 20px;
+					
+					a {
+						color: #69C7DE;
+						font-weight: bold;
+						text-decoration: none;
+						float: right;
+						margin-left: 10px;
+					}
+					
+					a:hover {
+						color: #fff;
+					}
+				}
+			}
+			
+			article[itemtype="http://data-vocabulary.org/Organization"]:after {
+				content: ".";
+			  display: block;
+			  height: 0;
+			  clear: both;
+			  visibility: hidden;
+			}
+		}
+	}	
+	
+	.who_we_are {
+		color: #69C7DE;
+		
+		h1 {
+			border-top: 2px solid #69C7DE;
+			padding-bottom: 20px;
+		}
+		
+		img {
+			padding: 10px;
+			background-color: #fff;
+		}
+		
+		h2 {
+			font-size: 15px;
+		}
+		
+		p {
+			font-size: 12px;
+			font-style: italic;
+			padding-bottom: 20px;
+		}
+		
+		a {
+			color: #69C7DE;
+			font-weight: bold;
+		}
+	}
+	
+	.contact_us {
+		article[itemtype="http://data-vocabulary.org/Organization"] {
+			h1 {
+				display: none;
+			}
+			
+			p {
+				padding: 0;
+				color: #ccc;
+				font-size: 11px;
+				background: none;
+			}
+
+			p[itemprop="address"] {
+
+				span[itemprop="street-address"] {
+
+				}
+
+				span[itemprop="locality"] {
+
+				}
+
+				span[itemprop="region"] {
+
+				}
+
+				span[itemprop="postal-code"] {
+				}
+
+				span[itemprop="country-name"] {
+					display: none;
+				}
+			}
+
+			p[itemprop="tel"] {
+
+			}
+
+			a[itemprop="url"] {
+				display: none;
+			}
+
+			.links a {
+				display: none;
+				color: #69C7DE;
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.certifications {
+		color: #2FC344;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		
+		h1 {
+			color: #2FC344;
+			border-top: 2px solid #2FC344;
+			padding-bottom: 20px;
+		}
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			
+			li {
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+		
+		a {
+			color: #2FC344;
+		}
+	}
+	
+	.media {
+		color: #2FC344;
+		margin-bottom: 20px;
+		
+		h1 {
+			color: #2FC344;
+			border-top: 2px solid #2FC344;
+			padding-bottom: 20px;
+		}
+		
+		h2 {
+			font-size: 15px;
+			padding-bottom: 10px;
+		}
+		
+		img {
+			padding: 10px;
+			background-color: #fff;
+		}
+		
+		p {
+			font-size: 12px;
+			font-style: italic;
+		}
+		
+		p.description {
+			display: none;
+		}
+		
+		a {
+			color: #2FC344;
+		}
+	}
+}
+
+footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+	h1 {
+		color: #996600;
+		font-family: 'ChunkFiveRegular', Arial, sans-serif;
+	}
+	
+	ul {
+		list-style: none;
+		
+		li {
+			padding-bottom: 5px;
+			
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	#copyright {
+		margin-top: -55px;
+		font-size: 12px;
+		color: #666;
+		text-align: right;
+	}
+}	
+
+/////////////////////////////////////////////////////////////

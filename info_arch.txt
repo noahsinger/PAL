@@ -1,0 +1,24 @@
+Info Arch!
+
+Education
+- current classes (sections)
+    - request a class
+- certifications
+    - beginning
+    - specialty
+    - professional
+
+About/Who we are
+- staff and instructors
+- contact
+- social
+
+Information
+- articles/blog/log book
+- newsletters
+
+Services
+- equipment
+- travel and vacations
+  
+Media / photo gallery / video (vimeo api?)

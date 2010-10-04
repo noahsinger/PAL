@@ -1,0 +1,13 @@
+<p>
+  <b>Time:</b>
+  <%= @meeting.time %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @meeting.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
+<%= link_to 'Back', certification_section_path(@section.certification,@section) %>

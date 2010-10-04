@@ -1,0 +1,56 @@
+// 640 iOS4 vertical (640) //////////////////////////////////
+@media screen and (min-width: 640px) and (max-width: 767px) {
+	//8
+	#page {
+		background-image: url(../images/starburst640.svg);
+	}
+	
+	.narrow {
+		width: 630px;
+	}
+	
+	header {		
+		h1 {
+			font-size: 3.2em;
+			margin-top: 20px;
+		}
+	}
+		
+	#search_subscribe {
+		.search_subscribe {
+			form {
+				input[type="text"] {
+					width: 305px;
+				}
+			}
+		}
+	}
+	
+	#content {		
+		#main_content {
+			h1 {
+				border-top: 0;
+			}
+			
+			p[itemprop="tel"] {
+				margin-left: 20px;
+				float: left;
+			}
+		}
+		
+		.contact_us {
+			display: none;
+		}
+	}
+	
+	footer {
+		ul {
+			padding-top: 30px;
+		}
+
+		#copyright {
+			text-align: left;
+			font-size: 11px;
+		}
+	}
+}

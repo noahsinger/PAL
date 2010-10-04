@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta id="viewport" name="viewport" content="initial-scale=1.0"/>
+	
+	<title>PAL</title>
+	<%= stylesheet_link_tag 'scaffold' %>
+	<%= stylesheet_link_tag 'screen.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'print.css', :media => 'print' %>
+	<%= stylesheet_link_tag 'quicksand.css', :media => 'all' %>
+	<%= stylesheet_link_tag 'chunkfive.css', :media => 'all' %>
+
+	<!--[if lt IE 8]>
+		<%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %>
+	<![endif]-->
+
+	
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'rails', 'application' %>
+  
+	<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=true">
+  </script>
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="page">
+		<div id="above_water">
+			<div class="narrow">
+				<header>
+					<%= render :partial => 'shared/header' %>
+				</header>
+			</div>
+		</div>
+		
+		<div id="open_water">
+			<div class="narrow" id="flash_holder">
+				<section id="flash">
+					<%= render :partial => 'shared/flash_message' %>
+				</section>
+			</div>
+			
+			<div class="narrow" id="search_subscribe_holder">
+				<section id="search_subscribe">
+					<%= render :partial => 'shared/search_subscribe' %>
+				</section>
+			</div>
+			
+	    <div class="narrow">
+				<section id="content">
+					<nav id="pos1">
+						<%= content_for?( :pos1 ) ? yield( :pos1 ) : render( :partial => 'shared/scuba_nav' ) %>
+					</nav>
+
+					<section id="main_content">
+						<section id="contact_info">
+							<%= render :partial => 'shared/hcard' %>
+						</section>
+						
+						<%= yield %>
+					</section>
+
+					<section id="pos2">
+						<%= content_for?( :pos2 ) ? yield( :pos1 ) : render( :partial => 'shared/who_we_are' ) %>
+					</section>
+
+					<section id="pos3">
+						<%= content_for?( :pos3 ) ? yield( :pos3 ) : render( :partial => 'shared/contact_us' ) %>
+					</section>
+					
+					<section id="pos4">
+						<%= content_for?( :pos4 ) ? yield( :pos4 ) : render( :partial => 'shared/certifications' ) %>
+					</section>
+						
+					<section id="pos5">
+						<%= content_for?( :pos5 ) ? yield( :pos5 ) : render( :partial => 'shared/media' ) %>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<div id="the_deep"><%= render :partial => 'shared/footer' %></div>
+	</div>	
+</body>
+</html>
