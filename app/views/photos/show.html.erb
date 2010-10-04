@@ -1,0 +1,16 @@
+
+<%= image_tag @photo.image.url %>
+<%# image_tag @photo.image.url(:thumb) %>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @photo.description %>
+</p>
+
+<%= link_to 'Edit', edit_album_photo_path(@album,@photo) %> |
+<%= link_to 'Back', album_photos_path(@album) %>

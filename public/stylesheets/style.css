@@ -1,0 +1,10 @@
+#notice {display: none;}
+
+#map_for_editing, #map_for_showing {
+    width: 400px;
+    height: 400px;
+}
+
+#create_location {
+    display: none;
+}

@@ -1,0 +1,19 @@
+<h1><%= @meeting.description %></h1>
+
+<p>
+  <b>Time:</b>
+  <%= @meeting.time %>
+</p>
+
+<% if @location %>
+    <%= hidden_field_tag 'lat', @location.lat %>
+    <%= hidden_field_tag 'lng', @location.lng %>
+
+    <div id="map_for_showing"></div>
+    <div id="directions_panel"></div>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
+<%= link_to 'Back', certification_section_path(@section.certification,@section) %>

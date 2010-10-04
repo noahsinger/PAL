@@ -1,0 +1,54 @@
+TODO: 
+
+finalize design
+
+develop:
+- certification levels
+
+- certification
+	- card image upload / selection
+- sections
+- meetings
+- locations
+	- geolocation
+	- google
+
+- class requests
+	- emails
+	
+- brands
+- albums
+- photos
+	- image upload
+
+- trips
+	- image upload
+
+- subscribers
+	- email
+- newsletters
+- newsletter sections
+	- image upload
+	- email
+	
+- articles
+	- image upload
+
+- staff
+	- image upload
+- contacts
+	- email
+- social data
+	- ???
+
+authentication
+authorization
+
+cacheing
+ux
+seo
+
+data transfer
+
+deployment
+

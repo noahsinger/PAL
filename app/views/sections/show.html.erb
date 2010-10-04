@@ -1,0 +1,20 @@
+<h1><%= @section.certification.name %></h1>
+
+<p>
+  <%= @section.description %>
+</p>
+
+<ol>
+    <% @section.meetings.each do |meeting| %>
+        <li>
+          <%= link_to meeting.description, meeting %>
+          <%= link_to '[Edit]', edit_meeting_path(meeting) %>
+          <%= link_to '[Destroy]', meeting, :method => :delete, :confirm => 'Are you sure?' %>
+        </li>        
+    <% end %>
+</ol>
+
+
+<%= link_to 'New Meeting', new_meeting_path( :section_id => @section ) %> |
+<%= link_to 'Edit Section', edit_certification_section_path(@certification,@section) %> |
+<%= link_to 'Back to Sections', certification_sections_path(@certification) %>

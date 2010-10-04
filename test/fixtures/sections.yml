@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  certification_id: 1  
+  description: MyText
+
+two:
+  id: 2
+  certification_id: 1 
+  description: MyText
+
+three:
+  id: 3
+  certification_id: 2
+  description: Something

@@ -1,0 +1,42 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  title: Subset
+  description: Should have been a sunset
+  album_id: 1
+  image_file_name: DSC9000.jpg
+  image_file_size: 12345
+  image_content_type: image/jpeg
+
+two:
+  title: Sting Ray
+  description: That one was very yummy
+  album_id: 1
+  image_file_name: DSC9000.jpg
+  image_file_size: 12345
+  image_content_type: image/jpeg
+
+three:
+  title: Whale
+  description: no really
+  album_id: 1
+  image_file_name: DSC9000.jpg
+  image_file_size: 12345
+  image_content_type: image/jpeg
+
+four:
+  title: Giant Squid
+  description: She sunk my ship
+  album_id: 2
+  image_file_name: DSC9000.jpg
+  image_file_size: 12345
+  image_content_type: image/jpeg
+
+five:
+  title: Palm tree
+  description: It's a tree
+  album_id: 2
+  image_file_name: DSC9000.jpg
+  image_file_size: 12345
+  image_content_type: image/jpeg

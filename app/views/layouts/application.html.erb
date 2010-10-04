@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAL</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag 'jquery-1.4.2.min', 'rails', 'application' %>
+  <script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=true">
+  </script>
+
+  <%= yield :head %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+    <p id="notice"><%= notice %></p>
+
+    <section id="session_links">
+        <% if current_user %>
+            <%= link_to 'Logout', user_sessions_path(), :method => :delete %>
+        <% else %>
+            <%= link_to 'Login', new_user_session_path %>
+        <% end %>
+    </section>
+
+    <%= yield %>
+
+</body>
+</html>

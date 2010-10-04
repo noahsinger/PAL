@@ -1,0 +1,10 @@
+one:
+  id: 1
+  name: Sample Cert 1
+  description: This is the first sample certification.
+  certification_level_id: 1
+
+two:
+  name: Sample Cert 2
+  description: This is another sample certification.
+  certification_level_id: 2
