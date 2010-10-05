@@ -153,44 +153,55 @@ a:hover {
 }
 
 /* line 4, ../../app/stylesheets/partials/_960.scss */
+#map_for_editing, #map_for_showing {
+  width: 100%;
+  height: 400px;
+}
+
+/* line 9, ../../app/stylesheets/partials/_960.scss */
+#create_location {
+  display: none;
+}
+
+/* line 13, ../../app/stylesheets/partials/_960.scss */
 .narrow {
   width: 950px;
   margin: 0 auto;
 }
 
-/* line 10, ../../app/stylesheets/partials/_960.scss */
+/* line 19, ../../app/stylesheets/partials/_960.scss */
 header {
   height: 140px;
 }
-/* line 13, ../../app/stylesheets/partials/_960.scss */
+/* line 22, ../../app/stylesheets/partials/_960.scss */
 header #logo {
   margin-top: 7px;
   position: relative;
   z-index: 10;
 }
-/* line 18, ../../app/stylesheets/partials/_960.scss */
+/* line 27, ../../app/stylesheets/partials/_960.scss */
 header #logo img {
   width: 155px;
   height: 155px;
 }
-/* line 25, ../../app/stylesheets/partials/_960.scss */
+/* line 33, ../../app/stylesheets/partials/_960.scss */
 header h1 {
   font-family: QuicksandLight, Arial, sans-serif;
   font-size: 3.7em;
   line-height: 1em;
   margin-top: 40px;
 }
-/* line 33, ../../app/stylesheets/partials/_960.scss */
+/* line 41, ../../app/stylesheets/partials/_960.scss */
 header #bouy img {
   position: relative;
   margin-top: 125px;
   z-index: 10;
 }
-/* line 40, ../../app/stylesheets/partials/_960.scss */
+/* line 48, ../../app/stylesheets/partials/_960.scss */
 header #header_forms {
   margin-top: 70px;
 }
-/* line 43, ../../app/stylesheets/partials/_960.scss */
+/* line 51, ../../app/stylesheets/partials/_960.scss */
 header #header_forms form {
   margin-top: 1px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -200,7 +211,7 @@ header #header_forms form {
   -moz-border-radius: 5px;
   text-align: center;
 }
-/* line 54, ../../app/stylesheets/partials/_960.scss */
+/* line 62, ../../app/stylesheets/partials/_960.scss */
 header #header_forms form input {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -210,14 +221,14 @@ header #header_forms form input {
   padding: 2px 3px;
 }
 
-/* line 69, ../../app/stylesheets/partials/_960.scss */
+/* line 77, ../../app/stylesheets/partials/_960.scss */
 #flash {
   margin: 0 0 10px 0;
   min-height: 27px;
   position: relative;
   z-index: 0;
 }
-/* line 75, ../../app/stylesheets/partials/_960.scss */
+/* line 83, ../../app/stylesheets/partials/_960.scss */
 #flash .flash {
   display: none;
   color: #fff;
@@ -228,22 +239,22 @@ header #header_forms form input {
   -webkit-border-bottom-right-radius: 10px;
   -moz-border-radius-bottomright: 10px;
 }
-/* line 87, ../../app/stylesheets/partials/_960.scss */
+/* line 95, ../../app/stylesheets/partials/_960.scss */
 #flash #notice {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(102, 204, 0, 0.8)), color-stop(0.5, rgba(102, 255, 0, 0.8)));
   background-image: -moz-linear-gradient(center top, rgba(102, 204, 0, 0.8) 0%, rgba(102, 255, 0, 0.8) 80%);
 }
-/* line 93, ../../app/stylesheets/partials/_960.scss */
+/* line 101, ../../app/stylesheets/partials/_960.scss */
 #flash #alert {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(153, 0, 0, 0.8)), color-stop(0.5, rgba(255, 0, 0, 0.8)));
   background-image: -moz-linear-gradient(center top, rgba(153, 0, 0, 0.8) 0%, rgba(255, 0, 0, 0.8) 80%);
 }
 
-/* line 100, ../../app/stylesheets/partials/_960.scss */
+/* line 108, ../../app/stylesheets/partials/_960.scss */
 #search_subscribe {
   display: none;
 }
-/* line 104, ../../app/stylesheets/partials/_960.scss */
+/* line 112, ../../app/stylesheets/partials/_960.scss */
 #search_subscribe .search_subscribe form {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 5px 10px;
@@ -251,14 +262,14 @@ header #header_forms form input {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
 }
-/* line 111, ../../app/stylesheets/partials/_960.scss */
+/* line 119, ../../app/stylesheets/partials/_960.scss */
 #search_subscribe .search_subscribe form input[type="text"] {
   padding: 5px 3px;
   width: 420px;
   font-size: 15px;
   border: 0;
 }
-/* line 118, ../../app/stylesheets/partials/_960.scss */
+/* line 126, ../../app/stylesheets/partials/_960.scss */
 #search_subscribe .search_subscribe form input[type="submit"] {
   position: relative;
   top: 0px;
@@ -267,7 +278,7 @@ header #header_forms form input {
   color: #fff;
   font-size: 15px;
 }
-/* line 128, ../../app/stylesheets/partials/_960.scss */
+/* line 136, ../../app/stylesheets/partials/_960.scss */
 #search_subscribe .search_subscribe form:after {
   content: ".";
   display: block;
@@ -276,11 +287,11 @@ header #header_forms form input {
   visibility: hidden;
 }
 
-/* line 139, ../../app/stylesheets/partials/_960.scss */
+/* line 147, ../../app/stylesheets/partials/_960.scss */
 #content section, #content nav {
   margin-top: 10px;
 }
-/* line 143, ../../app/stylesheets/partials/_960.scss */
+/* line 151, ../../app/stylesheets/partials/_960.scss */
 #content h1 {
   padding-top: 20px;
   position: relative;
@@ -289,18 +300,18 @@ header #header_forms form input {
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
   text-shadow: 2px 4px 7px #222;
 }
-/* line 155, ../../app/stylesheets/partials/_960.scss */
+/* line 163, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav h1 {
   color: #E6B519;
   border-top: 6px solid #E6B519;
   padding-left: 10px;
 }
-/* line 161, ../../app/stylesheets/partials/_960.scss */
+/* line 169, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul {
   background-image: url(../images/yellow_bg.png);
   list-style: none;
 }
-/* line 165, ../../app/stylesheets/partials/_960.scss */
+/* line 173, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul .header {
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
   font-style: italic;
@@ -308,44 +319,44 @@ header #header_forms form input {
   color: #E6B519;
   padding: 20px 10px 0px 10px;
 }
-/* line 173, ../../app/stylesheets/partials/_960.scss */
+/* line 181, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul li {
   padding: 5px 5px 0px 10px;
 }
-/* line 177, ../../app/stylesheets/partials/_960.scss */
+/* line 185, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul li a {
   color: #fff;
   font-size: 15px;
   text-decoration: none;
   font-weight: normal;
 }
-/* line 186, ../../app/stylesheets/partials/_960.scss */
+/* line 194, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul:nth-child(4) {
   padding-bottom: 20px;
 }
-/* line 190, ../../app/stylesheets/partials/_960.scss */
+/* line 198, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav img {
   margin-top: 20px;
 }
-/* line 195, ../../app/stylesheets/partials/_960.scss */
+/* line 203, ../../app/stylesheets/partials/_960.scss */
 #content #main_content {
   min-height: 400px;
   padding-bottom: 30px;
 }
-/* line 199, ../../app/stylesheets/partials/_960.scss */
+/* line 207, ../../app/stylesheets/partials/_960.scss */
 #content #main_content h1 {
   font-size: 40px;
   padding-left: 20px;
   color: #fff;
   border-top: 5px solid #fff;
 }
-/* line 206, ../../app/stylesheets/partials/_960.scss */
+/* line 214, ../../app/stylesheets/partials/_960.scss */
 #content #main_content .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-/* line 212, ../../app/stylesheets/partials/_960.scss */
+/* line 220, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -356,7 +367,7 @@ header #header_forms form input {
   margin-top: 30px;
   background-color: #f0f0f0;
 }
-/* line 223, ../../app/stylesheets/partials/_960.scss */
+/* line 231, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -367,61 +378,69 @@ header #header_forms form input {
   background-color: #c00;
   color: #fff;
 }
-/* line 234, ../../app/stylesheets/partials/_960.scss */
+/* line 242, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #error_explanation ul li {
   font-size: 12px;
   list-style: none;
   padding: 5px 15px;
   color: #000;
 }
-/* line 246, ../../app/stylesheets/partials/_960.scss */
+/* line 254, ../../app/stylesheets/partials/_960.scss */
 #content #main_content form input[type="text"], #content #main_content form input[type="password"] {
   width: 95%;
   font-size: 13px;
   padding: 3px 5px;
 }
-/* line 252, ../../app/stylesheets/partials/_960.scss */
+/* line 260, ../../app/stylesheets/partials/_960.scss */
 #content #main_content form div.field, #content #main_content form div.actions, #content #main_content form p.field, #content #main_content form p.actions {
   padding: 0px 20px 10px 20px;
   background-image: url(../images/white_bg.png);
   margin: 0;
 }
-/* line 258, ../../app/stylesheets/partials/_960.scss */
+/* line 266, ../../app/stylesheets/partials/_960.scss */
 #content #main_content form div.field:nth-child(2), #content #main_content form p.field:nth-child(2) {
   padding-top: 30px;
 }
-/* line 263, ../../app/stylesheets/partials/_960.scss */
+/* line 271, ../../app/stylesheets/partials/_960.scss */
 #content #main_content table {
   width: 100%;
-  padding-top: 30px;
+  padding: 30px 0px;
   background-image: url(../images/white_bg.png);
 }
-/* line 269, ../../app/stylesheets/partials/_960.scss */
+/* line 277, ../../app/stylesheets/partials/_960.scss */
+#content #main_content table tr th {
+  font-weight: bold;
+}
+/* line 281, ../../app/stylesheets/partials/_960.scss */
+#content #main_content table tr th:first-child, #content #main_content table tr td:first-child {
+  padding-left: 20px;
+}
+/* line 287, ../../app/stylesheets/partials/_960.scss */
 #content #main_content p {
   padding: 0px 20px 20px 20px;
   background-image: url(../images/white_bg.png);
 }
-/* line 274, ../../app/stylesheets/partials/_960.scss */
+/* line 292, ../../app/stylesheets/partials/_960.scss */
 #content #main_content p:nth-child(3) {
   padding-top: 30px;
 }
-/* line 278, ../../app/stylesheets/partials/_960.scss */
+/* line 296, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info {
   border-top: 5px solid #fff;
   padding-top: 30px;
   padding-bottom: 25px;
 }
-/* line 283, ../../app/stylesheets/partials/_960.scss */
+/* line 301, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] {
   background-image: url(../images/white_bg.png);
   padding: 10px 0;
   float: left;
 }
-/* line 288, ../../app/stylesheets/partials/_960.scss */
+/* line 306, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] h1 {
   display: none;
 }
-/* line 292, ../../app/stylesheets/partials/_960.scss */
+/* line 310, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p {
   padding: 0;
   color: #ccc;
@@ -431,7 +450,7 @@ header #header_forms form input {
   top: 2px;
   z-index: 1;
 }
-/* line 302, ../../app/stylesheets/partials/_960.scss */
+/* line 320, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p:after {
   content: ".";
   display: block;
@@ -439,33 +458,33 @@ header #header_forms form input {
   clear: both;
   visibility: hidden;
 }
-/* line 310, ../../app/stylesheets/partials/_960.scss */
+/* line 328, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] {
   float: left;
   padding-left: 20px;
 }
-/* line 323, ../../app/stylesheets/partials/_960.scss */
+/* line 341, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="postal-code"] {
   margin-right: 10px;
 }
-/* line 327, ../../app/stylesheets/partials/_960.scss */
+/* line 345, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="country-name"] {
   display: none;
 }
-/* line 332, ../../app/stylesheets/partials/_960.scss */
+/* line 350, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="tel"] {
   float: left;
 }
-/* line 336, ../../app/stylesheets/partials/_960.scss */
+/* line 354, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] a[itemprop="url"] {
   display: none;
 }
-/* line 340, ../../app/stylesheets/partials/_960.scss */
+/* line 358, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] .links {
   float: right;
   padding-right: 20px;
 }
-/* line 344, ../../app/stylesheets/partials/_960.scss */
+/* line 362, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] .links a {
   color: #69C7DE;
   font-weight: bold;
@@ -473,11 +492,11 @@ header #header_forms form input {
   float: right;
   margin-left: 10px;
 }
-/* line 352, ../../app/stylesheets/partials/_960.scss */
+/* line 370, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] .links a:hover {
   color: #fff;
 }
-/* line 358, ../../app/stylesheets/partials/_960.scss */
+/* line 376, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"]:after {
   content: ".";
   display: block;
@@ -485,144 +504,144 @@ header #header_forms form input {
   clear: both;
   visibility: hidden;
 }
-/* line 368, ../../app/stylesheets/partials/_960.scss */
+/* line 386, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are {
   color: #69C7DE;
 }
-/* line 371, ../../app/stylesheets/partials/_960.scss */
+/* line 389, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are h1 {
   border-top: 2px solid #69C7DE;
   padding-bottom: 20px;
 }
-/* line 376, ../../app/stylesheets/partials/_960.scss */
+/* line 394, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are img {
   padding: 10px;
   background-color: #fff;
 }
-/* line 381, ../../app/stylesheets/partials/_960.scss */
+/* line 399, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are h2 {
   font-size: 15px;
 }
-/* line 385, ../../app/stylesheets/partials/_960.scss */
+/* line 403, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are p {
   font-size: 12px;
   font-style: italic;
   padding-bottom: 20px;
 }
-/* line 391, ../../app/stylesheets/partials/_960.scss */
+/* line 409, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are a {
   color: #69C7DE;
   font-weight: bold;
 }
-/* line 399, ../../app/stylesheets/partials/_960.scss */
+/* line 417, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] h1 {
   display: none;
 }
-/* line 403, ../../app/stylesheets/partials/_960.scss */
+/* line 421, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] p {
   padding: 0;
   color: #ccc;
   font-size: 11px;
   background: none;
 }
-/* line 427, ../../app/stylesheets/partials/_960.scss */
+/* line 445, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="country-name"] {
   display: none;
 }
-/* line 436, ../../app/stylesheets/partials/_960.scss */
+/* line 454, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] a[itemprop="url"] {
   display: none;
 }
-/* line 440, ../../app/stylesheets/partials/_960.scss */
+/* line 458, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] .links a {
   display: none;
   color: #69C7DE;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 449, ../../app/stylesheets/partials/_960.scss */
+/* line 467, ../../app/stylesheets/partials/_960.scss */
 #content .certifications {
   color: #2FC344;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* line 454, ../../app/stylesheets/partials/_960.scss */
+/* line 472, ../../app/stylesheets/partials/_960.scss */
 #content .certifications h1 {
   color: #2FC344;
   border-top: 2px solid #2FC344;
   padding-bottom: 20px;
 }
-/* line 460, ../../app/stylesheets/partials/_960.scss */
+/* line 478, ../../app/stylesheets/partials/_960.scss */
 #content .certifications ul {
   list-style: none;
   margin: 0;
 }
-/* line 465, ../../app/stylesheets/partials/_960.scss */
+/* line 483, ../../app/stylesheets/partials/_960.scss */
 #content .certifications ul li a {
   text-decoration: none;
 }
-/* line 471, ../../app/stylesheets/partials/_960.scss */
+/* line 489, ../../app/stylesheets/partials/_960.scss */
 #content .certifications a {
   color: #2FC344;
 }
-/* line 476, ../../app/stylesheets/partials/_960.scss */
+/* line 494, ../../app/stylesheets/partials/_960.scss */
 #content .media {
   color: #2FC344;
   margin-bottom: 20px;
 }
-/* line 480, ../../app/stylesheets/partials/_960.scss */
+/* line 498, ../../app/stylesheets/partials/_960.scss */
 #content .media h1 {
   color: #2FC344;
   border-top: 2px solid #2FC344;
   padding-bottom: 20px;
 }
-/* line 486, ../../app/stylesheets/partials/_960.scss */
+/* line 504, ../../app/stylesheets/partials/_960.scss */
 #content .media h2 {
   font-size: 15px;
   padding-bottom: 10px;
 }
-/* line 491, ../../app/stylesheets/partials/_960.scss */
+/* line 509, ../../app/stylesheets/partials/_960.scss */
 #content .media img {
   padding: 10px;
   background-color: #fff;
 }
-/* line 496, ../../app/stylesheets/partials/_960.scss */
+/* line 514, ../../app/stylesheets/partials/_960.scss */
 #content .media p {
   font-size: 12px;
   font-style: italic;
 }
-/* line 501, ../../app/stylesheets/partials/_960.scss */
+/* line 519, ../../app/stylesheets/partials/_960.scss */
 #content .media p.description {
   display: none;
 }
-/* line 505, ../../app/stylesheets/partials/_960.scss */
+/* line 523, ../../app/stylesheets/partials/_960.scss */
 #content .media a {
   color: #2FC344;
 }
 
-/* line 511, ../../app/stylesheets/partials/_960.scss */
+/* line 529, ../../app/stylesheets/partials/_960.scss */
 footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 515, ../../app/stylesheets/partials/_960.scss */
+/* line 533, ../../app/stylesheets/partials/_960.scss */
 footer h1 {
   color: #996600;
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
 }
-/* line 520, ../../app/stylesheets/partials/_960.scss */
+/* line 538, ../../app/stylesheets/partials/_960.scss */
 footer ul {
   list-style: none;
 }
-/* line 523, ../../app/stylesheets/partials/_960.scss */
+/* line 541, ../../app/stylesheets/partials/_960.scss */
 footer ul li {
   padding-bottom: 5px;
 }
-/* line 526, ../../app/stylesheets/partials/_960.scss */
+/* line 544, ../../app/stylesheets/partials/_960.scss */
 footer ul li a {
   text-decoration: none;
 }
-/* line 532, ../../app/stylesheets/partials/_960.scss */
+/* line 550, ../../app/stylesheets/partials/_960.scss */
 footer #copyright {
   margin-top: -55px;
   font-size: 12px;

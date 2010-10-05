@@ -12,7 +12,7 @@
 <% @certifications.each do |certification| %>
   <tr>
     <td><%= certification.name %></td>
-    <td><%= certification.description %></td>
+    <td><%= truncate certification.description %></td>
     <td><%= link_to 'Show', certification_sections_path(certification) %></td>
     <td><%= link_to 'Edit', edit_certification_path(certification) %></td>
     <td><%= link_to 'Destroy', certification, :confirm => 'Are you sure?', :method => :delete %></td>

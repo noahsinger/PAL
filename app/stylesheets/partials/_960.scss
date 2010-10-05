@@ -1,6 +1,15 @@
 /////////////////////////////////////////////////////////
 // default 960 - 15 column view
 
+	#map_for_editing, #map_for_showing {
+		width: 100%;
+		height: 400px;
+	}
+
+	#create_location {
+	    display: none;
+	}
+
 	.narrow {
 		width: 950px; //width - 10 so no gutter on last column
 		margin: 0 auto;
@@ -20,7 +29,6 @@
 				height: 155px;
 			}
 		}
-		
 		
 		h1 {
 			font-family: QuicksandLight, Arial, sans-serif;
@@ -262,8 +270,18 @@
 		
 		table {
 			width: 100%;
-			padding-top: 30px;
+			padding: 30px 0px;
 			background-image: url(../images/white_bg.png);
+			
+			tr {
+				th {
+					font-weight: bold;
+				}
+				
+				th:first-child, td:first-child {
+					padding-left: 20px;
+				}
+			}
 		}
 				
 		p {

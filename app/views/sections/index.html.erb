@@ -1,8 +1,9 @@
-<h1>Listing sections</h1>
+<h1><%= @certification.name %> Classes</h1>
+
+<p><%= @certification.description %></p>
 
 <table>
   <tr>
-    <th>Certification</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -11,7 +12,6 @@
 
 <% @sections.each do |section| %>
   <tr>
-    <td><%= section.certification %></td>
     <td><%= section.description %></td>
     <td><%= link_to 'Show', [@certification,section] %></td>
     <td><%= link_to 'Edit', edit_certification_section_path(@certification,section) %></td>
@@ -22,4 +22,5 @@
 
 <br />
 
+<%= link_to "Edit the #{@certification.name} certification", edit_certification_path(@certification) %> |
 <%= link_to 'New Section', new_certification_section_path(@certification) %>
