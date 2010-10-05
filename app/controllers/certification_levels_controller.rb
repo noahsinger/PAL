@@ -10,17 +10,6 @@ class CertificationLevelsController < ApplicationController
     end
   end
 
-  # GET /certification_levels/1
-  # GET /certification_levels/1.xml
-  def show
-    @certification_level = CertificationLevel.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @certification_level }
-    end
-  end
-
   # GET /certification_levels/new
   # GET /certification_levels/new.xml
   def new
@@ -44,7 +33,7 @@ class CertificationLevelsController < ApplicationController
 
     respond_to do |format|
       if @certification_level.save
-        format.html { redirect_to(@certification_level, :notice => 'Certification level was successfully created.') }
+        format.html { redirect_to(certification_levels_url, :notice => 'Certification level was successfully created.') }
         format.xml  { render :xml => @certification_level, :status => :created, :location => @certification_level }
       else
         format.html { render :action => "new" }
@@ -60,7 +49,7 @@ class CertificationLevelsController < ApplicationController
 
     respond_to do |format|
       if @certification_level.update_attributes(params[:certification_level])
-        format.html { redirect_to(@certification_level, :notice => 'Certification level was successfully updated.') }
+        format.html { redirect_to(certification_levels_url, :notice => 'Certification level was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

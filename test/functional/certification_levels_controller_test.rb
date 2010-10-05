@@ -21,12 +21,7 @@ class CertificationLevelsControllerTest < ActionController::TestCase
       post :create, :certification_level => {:name => 'Pro'}
     end
 
-    assert_redirected_to certification_level_path(assigns(:certification_level))
-  end
-
-  test "should show certification_level" do
-    get :show, :id => @certification_level.to_param
-    assert_response :success
+    assert_redirected_to certification_levels_path
   end
 
   test "should get edit" do
@@ -36,7 +31,7 @@ class CertificationLevelsControllerTest < ActionController::TestCase
 
   test "should update certification_level" do
     put :update, :id => @certification_level.to_param, :certification_level => @certification_level.attributes
-    assert_redirected_to certification_level_path(assigns(:certification_level))
+    assert_redirected_to certification_levels_path
   end
 
   test "should destroy certification_level" do
