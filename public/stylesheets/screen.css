@@ -292,26 +292,34 @@ header #header_forms form input {
   margin-top: 10px;
 }
 /* line 151, ../../app/stylesheets/partials/_960.scss */
+#content a:visited {
+  color: #ccc;
+}
+/* line 155, ../../app/stylesheets/partials/_960.scss */
+#content a {
+  color: #eee;
+}
+/* line 159, ../../app/stylesheets/partials/_960.scss */
 #content h1 {
-  padding-top: 20px;
+  padding-top: 30px;
   position: relative;
   top: 10px;
   font-size: 20px;
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
   text-shadow: 2px 4px 7px #222;
 }
-/* line 163, ../../app/stylesheets/partials/_960.scss */
+/* line 172, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav h1 {
   color: #E6B519;
   border-top: 6px solid #E6B519;
   padding-left: 10px;
 }
-/* line 169, ../../app/stylesheets/partials/_960.scss */
+/* line 178, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul {
   background-image: url(../images/yellow_bg.png);
   list-style: none;
 }
-/* line 173, ../../app/stylesheets/partials/_960.scss */
+/* line 182, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul .header {
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
   font-style: italic;
@@ -319,44 +327,49 @@ header #header_forms form input {
   color: #E6B519;
   padding: 20px 10px 0px 10px;
 }
-/* line 181, ../../app/stylesheets/partials/_960.scss */
+/* line 190, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul li {
   padding: 5px 5px 0px 10px;
 }
-/* line 185, ../../app/stylesheets/partials/_960.scss */
+/* line 194, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul li a {
   color: #fff;
   font-size: 15px;
   text-decoration: none;
   font-weight: normal;
 }
-/* line 194, ../../app/stylesheets/partials/_960.scss */
+/* line 203, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav ul:nth-child(4) {
   padding-bottom: 20px;
 }
-/* line 198, ../../app/stylesheets/partials/_960.scss */
+/* line 207, ../../app/stylesheets/partials/_960.scss */
 #content .scuba_nav img {
   margin-top: 20px;
 }
-/* line 203, ../../app/stylesheets/partials/_960.scss */
+/* line 212, ../../app/stylesheets/partials/_960.scss */
 #content #main_content {
   min-height: 400px;
   padding-bottom: 30px;
+  position: relative;
 }
-/* line 207, ../../app/stylesheets/partials/_960.scss */
+/* line 217, ../../app/stylesheets/partials/_960.scss */
 #content #main_content h1 {
   font-size: 40px;
+  line-height: 40px;
+  margin-bottom: -10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   padding-left: 20px;
   color: #fff;
   border-top: 5px solid #fff;
 }
-/* line 214, ../../app/stylesheets/partials/_960.scss */
+/* line 231, ../../app/stylesheets/partials/_960.scss */
 #content #main_content .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-/* line 220, ../../app/stylesheets/partials/_960.scss */
+/* line 237, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -367,7 +380,7 @@ header #header_forms form input {
   margin-top: 30px;
   background-color: #f0f0f0;
 }
-/* line 231, ../../app/stylesheets/partials/_960.scss */
+/* line 248, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -378,69 +391,81 @@ header #header_forms form input {
   background-color: #c00;
   color: #fff;
 }
-/* line 242, ../../app/stylesheets/partials/_960.scss */
+/* line 259, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #error_explanation ul li {
   font-size: 12px;
   list-style: none;
   padding: 5px 15px;
   color: #000;
 }
-/* line 254, ../../app/stylesheets/partials/_960.scss */
+/* line 266, ../../app/stylesheets/partials/_960.scss */
+#content #main_content form {
+  background-image: url(../images/white_bg.png);
+}
+/* line 273, ../../app/stylesheets/partials/_960.scss */
 #content #main_content form input[type="text"], #content #main_content form input[type="password"] {
   width: 95%;
   font-size: 13px;
   padding: 3px 5px;
 }
-/* line 260, ../../app/stylesheets/partials/_960.scss */
+/* line 279, ../../app/stylesheets/partials/_960.scss */
 #content #main_content form div.field, #content #main_content form div.actions, #content #main_content form p.field, #content #main_content form p.actions {
   padding: 0px 20px 10px 20px;
-  background-image: url(../images/white_bg.png);
+  background-image: none;
   margin: 0;
 }
-/* line 266, ../../app/stylesheets/partials/_960.scss */
+/* line 286, ../../app/stylesheets/partials/_960.scss */
 #content #main_content form div.field:nth-child(2), #content #main_content form p.field:nth-child(2) {
   padding-top: 30px;
 }
-/* line 271, ../../app/stylesheets/partials/_960.scss */
+/* line 291, ../../app/stylesheets/partials/_960.scss */
 #content #main_content table {
   width: 100%;
   padding: 30px 0px;
   background-image: url(../images/white_bg.png);
 }
-/* line 277, ../../app/stylesheets/partials/_960.scss */
+/* line 297, ../../app/stylesheets/partials/_960.scss */
 #content #main_content table tr th {
   font-weight: bold;
 }
-/* line 281, ../../app/stylesheets/partials/_960.scss */
+/* line 301, ../../app/stylesheets/partials/_960.scss */
 #content #main_content table tr th:first-child, #content #main_content table tr td:first-child {
   padding-left: 20px;
 }
-/* line 287, ../../app/stylesheets/partials/_960.scss */
+/* line 305, ../../app/stylesheets/partials/_960.scss */
+#content #main_content table tr td {
+  padding: 5px 10px;
+}
+/* line 310, ../../app/stylesheets/partials/_960.scss */
+#content #main_content table tr.odd {
+  background-image: url(../images/white_bg.png);
+}
+/* line 315, ../../app/stylesheets/partials/_960.scss */
 #content #main_content p {
   padding: 0px 20px 20px 20px;
   background-image: url(../images/white_bg.png);
 }
-/* line 292, ../../app/stylesheets/partials/_960.scss */
+/* line 320, ../../app/stylesheets/partials/_960.scss */
 #content #main_content p:nth-child(3) {
   padding-top: 30px;
 }
-/* line 296, ../../app/stylesheets/partials/_960.scss */
+/* line 324, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info {
   border-top: 5px solid #fff;
   padding-top: 30px;
   padding-bottom: 25px;
 }
-/* line 301, ../../app/stylesheets/partials/_960.scss */
+/* line 329, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] {
   background-image: url(../images/white_bg.png);
   padding: 10px 0;
   float: left;
 }
-/* line 306, ../../app/stylesheets/partials/_960.scss */
+/* line 334, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] h1 {
   display: none;
 }
-/* line 310, ../../app/stylesheets/partials/_960.scss */
+/* line 338, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p {
   padding: 0;
   color: #ccc;
@@ -450,7 +475,7 @@ header #header_forms form input {
   top: 2px;
   z-index: 1;
 }
-/* line 320, ../../app/stylesheets/partials/_960.scss */
+/* line 348, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p:after {
   content: ".";
   display: block;
@@ -458,33 +483,33 @@ header #header_forms form input {
   clear: both;
   visibility: hidden;
 }
-/* line 328, ../../app/stylesheets/partials/_960.scss */
+/* line 356, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] {
   float: left;
   padding-left: 20px;
 }
-/* line 341, ../../app/stylesheets/partials/_960.scss */
+/* line 369, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="postal-code"] {
   margin-right: 10px;
 }
-/* line 345, ../../app/stylesheets/partials/_960.scss */
+/* line 373, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="country-name"] {
   display: none;
 }
-/* line 350, ../../app/stylesheets/partials/_960.scss */
+/* line 378, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="tel"] {
   float: left;
 }
-/* line 354, ../../app/stylesheets/partials/_960.scss */
+/* line 382, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] a[itemprop="url"] {
   display: none;
 }
-/* line 358, ../../app/stylesheets/partials/_960.scss */
+/* line 386, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] .links {
   float: right;
   padding-right: 20px;
 }
-/* line 362, ../../app/stylesheets/partials/_960.scss */
+/* line 390, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] .links a {
   color: #69C7DE;
   font-weight: bold;
@@ -492,11 +517,11 @@ header #header_forms form input {
   float: right;
   margin-left: 10px;
 }
-/* line 370, ../../app/stylesheets/partials/_960.scss */
+/* line 398, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"] .links a:hover {
   color: #fff;
 }
-/* line 376, ../../app/stylesheets/partials/_960.scss */
+/* line 404, ../../app/stylesheets/partials/_960.scss */
 #content #main_content #contact_info article[itemtype="http://data-vocabulary.org/Organization"]:after {
   content: ".";
   display: block;
@@ -504,144 +529,144 @@ header #header_forms form input {
   clear: both;
   visibility: hidden;
 }
-/* line 386, ../../app/stylesheets/partials/_960.scss */
+/* line 414, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are {
   color: #69C7DE;
 }
-/* line 389, ../../app/stylesheets/partials/_960.scss */
+/* line 417, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are h1 {
   border-top: 2px solid #69C7DE;
   padding-bottom: 20px;
 }
-/* line 394, ../../app/stylesheets/partials/_960.scss */
+/* line 422, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are img {
   padding: 10px;
   background-color: #fff;
 }
-/* line 399, ../../app/stylesheets/partials/_960.scss */
+/* line 427, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are h2 {
   font-size: 15px;
 }
-/* line 403, ../../app/stylesheets/partials/_960.scss */
+/* line 431, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are p {
   font-size: 12px;
   font-style: italic;
   padding-bottom: 20px;
 }
-/* line 409, ../../app/stylesheets/partials/_960.scss */
+/* line 437, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are a {
   color: #69C7DE;
   font-weight: bold;
 }
-/* line 417, ../../app/stylesheets/partials/_960.scss */
+/* line 445, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] h1 {
   display: none;
 }
-/* line 421, ../../app/stylesheets/partials/_960.scss */
+/* line 449, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] p {
   padding: 0;
   color: #ccc;
   font-size: 11px;
   background: none;
 }
-/* line 445, ../../app/stylesheets/partials/_960.scss */
+/* line 473, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="country-name"] {
   display: none;
 }
-/* line 454, ../../app/stylesheets/partials/_960.scss */
+/* line 482, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] a[itemprop="url"] {
   display: none;
 }
-/* line 458, ../../app/stylesheets/partials/_960.scss */
+/* line 486, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] .links a {
   display: none;
   color: #69C7DE;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 467, ../../app/stylesheets/partials/_960.scss */
+/* line 495, ../../app/stylesheets/partials/_960.scss */
 #content .certifications {
   color: #2FC344;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* line 472, ../../app/stylesheets/partials/_960.scss */
+/* line 500, ../../app/stylesheets/partials/_960.scss */
 #content .certifications h1 {
   color: #2FC344;
   border-top: 2px solid #2FC344;
   padding-bottom: 20px;
 }
-/* line 478, ../../app/stylesheets/partials/_960.scss */
+/* line 506, ../../app/stylesheets/partials/_960.scss */
 #content .certifications ul {
   list-style: none;
   margin: 0;
 }
-/* line 483, ../../app/stylesheets/partials/_960.scss */
+/* line 511, ../../app/stylesheets/partials/_960.scss */
 #content .certifications ul li a {
   text-decoration: none;
 }
-/* line 489, ../../app/stylesheets/partials/_960.scss */
+/* line 517, ../../app/stylesheets/partials/_960.scss */
 #content .certifications a {
   color: #2FC344;
 }
-/* line 494, ../../app/stylesheets/partials/_960.scss */
+/* line 522, ../../app/stylesheets/partials/_960.scss */
 #content .media {
   color: #2FC344;
   margin-bottom: 20px;
 }
-/* line 498, ../../app/stylesheets/partials/_960.scss */
+/* line 526, ../../app/stylesheets/partials/_960.scss */
 #content .media h1 {
   color: #2FC344;
   border-top: 2px solid #2FC344;
   padding-bottom: 20px;
 }
-/* line 504, ../../app/stylesheets/partials/_960.scss */
+/* line 532, ../../app/stylesheets/partials/_960.scss */
 #content .media h2 {
   font-size: 15px;
   padding-bottom: 10px;
 }
-/* line 509, ../../app/stylesheets/partials/_960.scss */
+/* line 537, ../../app/stylesheets/partials/_960.scss */
 #content .media img {
   padding: 10px;
   background-color: #fff;
 }
-/* line 514, ../../app/stylesheets/partials/_960.scss */
+/* line 542, ../../app/stylesheets/partials/_960.scss */
 #content .media p {
   font-size: 12px;
   font-style: italic;
 }
-/* line 519, ../../app/stylesheets/partials/_960.scss */
+/* line 547, ../../app/stylesheets/partials/_960.scss */
 #content .media p.description {
   display: none;
 }
-/* line 523, ../../app/stylesheets/partials/_960.scss */
+/* line 551, ../../app/stylesheets/partials/_960.scss */
 #content .media a {
   color: #2FC344;
 }
 
-/* line 529, ../../app/stylesheets/partials/_960.scss */
+/* line 557, ../../app/stylesheets/partials/_960.scss */
 footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 533, ../../app/stylesheets/partials/_960.scss */
+/* line 561, ../../app/stylesheets/partials/_960.scss */
 footer h1 {
   color: #996600;
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
 }
-/* line 538, ../../app/stylesheets/partials/_960.scss */
+/* line 566, ../../app/stylesheets/partials/_960.scss */
 footer ul {
   list-style: none;
 }
-/* line 541, ../../app/stylesheets/partials/_960.scss */
+/* line 569, ../../app/stylesheets/partials/_960.scss */
 footer ul li {
   padding-bottom: 5px;
 }
-/* line 544, ../../app/stylesheets/partials/_960.scss */
+/* line 572, ../../app/stylesheets/partials/_960.scss */
 footer ul li a {
   text-decoration: none;
 }
-/* line 550, ../../app/stylesheets/partials/_960.scss */
+/* line 578, ../../app/stylesheets/partials/_960.scss */
 footer #copyright {
   margin-top: -55px;
   font-size: 12px;

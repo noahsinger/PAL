@@ -1,4 +1,4 @@
-/////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 // default 960 - 15 column view
 
 	#map_for_editing, #map_for_showing {
@@ -148,11 +148,20 @@
 		margin-top: 10px;
 	}
 	
+	a:visited {
+		color: #ccc;
+	}
+	
+	a {
+		color: #eee;
+	}
+	
 	h1 {
-		padding-top: 20px;
+		padding-top: 30px;
 		
 		position: relative;
-		top: 10px;
+		top: 10px; //push h1 down onto the content
+
 		
 		font-size: 20px;
 		font-family: 'ChunkFiveRegular', Arial, sans-serif;
@@ -203,10 +212,18 @@
 	#main_content {		
 		min-height: 400px;
 		padding-bottom: 30px;
+		position: relative;
 		
 		h1 {
 			font-size: 40px;
+			
+			line-height: 40px;  //for h1's that wrap to multilines
+			margin-bottom: -10px;
+//			margin-bottom: -54px;
+			padding-bottom: 20px;
+			padding-top: 20px;
 			padding-left: 20px;
+			
 			color: #fff;
 			border-top: 5px solid #fff;
 		}
@@ -247,6 +264,8 @@
 		}
 		
 		form {
+			background-image: url(../images/white_bg.png);
+			
 			label {
 //				display: block;
 			}
@@ -259,7 +278,8 @@
 			
 			div.field, div.actions, p.field, p.actions {
 				padding: 0px 20px 10px 20px;
-				background-image: url(../images/white_bg.png);
+//				background-image: url(../images/white_bg.png);
+				background-image: none;
 				margin: 0;
 			}
 			
@@ -281,6 +301,14 @@
 				th:first-child, td:first-child {
 					padding-left: 20px;
 				}
+				
+				td {
+					padding: 5px 10px;
+				}
+			}
+			
+			tr.odd {
+				background-image: url(../images/white_bg.png);
 			}
 		}
 				

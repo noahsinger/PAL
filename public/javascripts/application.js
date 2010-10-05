@@ -128,4 +128,42 @@ $(document).ready( function( ) {
 	
 	setTimeout( function( ) {$("#notice").slideDown("slow")}, 1000 );
 	setTimeout( function( ) {$("#alert").slideDown("slow")}, 1000 );
+	
+	//fix main-content h1 vertical spacing
+	if( $("#main_content>h1").size( ) > 0 ) {
+		var bottom_margin = -($("#main_content>h1").outerHeight( ) - 54);
+		$("#main_content>h1").css( "margin-bottom", bottom_margin );
+		
+		// alert( "padding-top is " + $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) );
+	
+		if( $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) < -bottom_margin ) {
+			$("#main_content>h1 ~ *").first( ).css("padding-top", -bottom_margin);
+		}
+		
+		// alert( "height: " + $("#main_content>h1").outerHeight( ) + "\nbottom_margin: " + bottom_margin );
+	}
+	
+	//zebra stripe the tables
+	$("table tr:odd").each( function( ) {
+		$(this).addClass("odd");
+	});
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
