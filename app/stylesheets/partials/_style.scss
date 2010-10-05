@@ -1,0 +1,86 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: #fff;
+	font-family: helvetica, arial, sans-serif;	
+  background-image: -moz-radial-gradient(center 45deg, circle closest-corner, #003399 0%, #2D68D4 100%);
+	background-image: -webkit-gradient(radial, 150 100, 10, 150 100, 600, from(#003399), to(#2D68D4));
+}
+
+#page {
+	background-image: url(../images/starburst960.svg);
+	background-repeat: no-repeat;
+	background-position: center 0;
+	overflow: visible;
+}
+
+#map_canvas {
+    width: 400px;
+    height: 400px;
+}
+
+a:hover {
+	background-color: transparent;
+}
+
+#above_water {
+//	background-color: #2D68D4;
+	height: 140px;
+}
+
+#open_water {
+//	background-image: url(../images/open_water_bg.png);
+	
+	border-top: 3px solid rgba(255,255,255,.5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(0,153,255,.7)),color-stop(.5, rgba(0,0,102,.7)));
+	background-image:	-moz-linear-gradient(center top, rgba(0,153,255,.7) 0%, rgba(0,0,102,.7) 50%);
+	
+	background-repeat: repeat-x;
+}
+
+#open_water:after {
+	content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#the_deep {
+	background-color: rgba(0,0,102,.7);
+	background-image: url(../images/the_deep_bg.png);
+	
+	border-top: 3px solid rgba(153,102,0,.5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(7,29,87,.5)),color-stop(.5, rgba(0,0,0,.5)));
+	background-image:	-moz-linear-gradient(center top, rgba(7,29,87,.5) 0%, rgba(0,0,0,.5) 50%);
+	
+	background-repeat: repeat-x;
+}
+
+#the_deep:after {
+	content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+@import "960";
+@import "320";
+@import "448";
+@import "640";
+@import "768";
+
+
+// default and iOS4 horizontal (960) /////////////////////////
+@media screen and (min-width: 960px) and (max-width: 1023px) {
+	// default, at top
+	#contact_info {
+		display: none;
+	}
+}
+
+@import "1024";
+@import "1280";

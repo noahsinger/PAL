@@ -45,16 +45,13 @@ class MeetingsController < ApplicationController
   def create
     @meeting = Meeting.new(params[:meeting])
 
+    # if a new location was submitted
     if params[:location] and !params[:location][:name].blank?
       @location = Location.new(params[:location])
-    end
-
-    if @location and @location.save
+      @location.save
       @meeting.location = @location
-    else
-      @location = nil
     end
-
+    
     respond_to do |format|
       if @meeting.save
         format.html { redirect_to(@meeting, :notice => 'Meeting was successfully created.') }

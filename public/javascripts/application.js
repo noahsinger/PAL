@@ -123,4 +123,7 @@ $(document).ready( function( ) {
 	                        imageBtnClose: '../../../../images/lightbox-btn-close.gif',
 	                        imageBtnPrev: '../../../../images/lightbox-btn-prev.gif',
 	                        imageBtnNext: '../../../../images/lightbox-btn-next.gif'});
+	
+	setTimeout( function( ) {$("#notice").slideDown("slow")}, 1000 );
+	setTimeout( function( ) {$("#alert").slideDown("slow")}, 1000 );
 });

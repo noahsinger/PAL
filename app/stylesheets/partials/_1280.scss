@@ -1,0 +1,42 @@
+// 1280 widescreen (1280) /////////////////////////////////
+@media screen and (min-width: 1280px) {
+	//16
+	#page {
+		background-image: url(../images/starburst1280.svg);
+	}
+	
+	.narrow {
+		width: 1270px;
+	}
+	
+	header {
+		h1 {
+			font-size: 5em;
+			margin-top: 12px;
+		}
+	}
+	
+	#content {
+		.media {			
+			@include push(2);
+			
+			p.description {
+				display: block;
+			}
+		}
+		
+		#contact_info {
+			display: none;
+		}
+		
+		.contact_us {
+			border-top: 2px solid #fff;
+			margin-top: 10px;
+			padding-top: 20px;
+		}
+	}
+		
+	#search_subscribe {
+		display: none;
+	}
+}

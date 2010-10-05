@@ -1,5 +1,10 @@
 PAL::Application.routes.draw do
   #get "user_sessions/new"
+  get "home/index"
+  get "home/template"
+
+  match 'logout' => 'user_sessions#destroy'
+  
   resources :user_sessions
 
   resources :users
@@ -9,9 +14,7 @@ PAL::Application.routes.draw do
   resources :meetings
 
   resources :certification_levels
-
-  match 'logout' => 'user_sessions#destroy', :method => :delete
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -69,7 +72,7 @@ PAL::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "certifications#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

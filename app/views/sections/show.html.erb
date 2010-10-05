@@ -5,13 +5,13 @@
 </p>
 
 <ol>
-    <% @section.meetings.each do |meeting| %>
-        <li>
-          <%= link_to meeting.description, meeting %>
-          <%= link_to '[Edit]', edit_meeting_path(meeting) %>
-          <%= link_to '[Destroy]', meeting, :method => :delete, :confirm => 'Are you sure?' %>
-        </li>        
-    <% end %>
+	<% @section.meetings.each do |meeting| %>
+		<li>
+			<%= link_to meeting.description, meeting %>
+			<%= link_to '[Edit]', edit_meeting_path(meeting) %>
+			<%= link_to '[Destroy]', meeting, :method => :delete, :confirm => 'Are you sure?' %>
+		</li>        
+	<% end %>
 </ol>
 
 

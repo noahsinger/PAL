@@ -11,3 +11,8 @@ gem "authlogic"
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "compass", ">= 0.10.5"
+
+group :development, :test do
+  gem 'infinity_test'
+end
