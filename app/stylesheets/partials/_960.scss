@@ -193,6 +193,7 @@
 	}
 	
 	#main_content {		
+		min-height: 400px;
 		padding-bottom: 30px;
 		
 		h1 {
@@ -239,7 +240,7 @@
 		
 		form {
 			label {
-				display: block;
+//				display: block;
 			}
 			
 			input[type="text"],input[type="password"] {
@@ -248,13 +249,21 @@
 				padding: 3px 5px;
 			}
 			
-			p.field, p.actions {
+			div.field, div.actions, p.field, p.actions {
 				padding: 0px 20px 10px 20px;
+				background-image: url(../images/white_bg.png);
+				margin: 0;
 			}
 			
-			p.field:nth-child(2) {
+			div.field:nth-child(2), p.field:nth-child(2) {
 				padding-top: 30px;
 			}
+		}
+		
+		table {
+			width: 100%;
+			padding-top: 30px;
+			background-image: url(../images/white_bg.png);
 		}
 				
 		p {
