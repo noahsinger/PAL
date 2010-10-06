@@ -1,14 +1,9 @@
-
-<%= image_tag @photo.image.url %>
-<%# image_tag @photo.image.url(:thumb) %>
+<h1><%= @photo.title %></h1>
 
 <p>
-  <b>Title:</b>
-  <%= @photo.title %>
-</p>
-
-<p>
-  <b>Description:</b>
+	<%# image_tag @photo.image.url, :width => '100' %>
+	<%= image_tag @photo.image.url(:thumb) %>
+	
   <%= @photo.description %>
 </p>
 

@@ -212,14 +212,15 @@
 	#main_content {		
 		min-height: 400px;
 		padding-bottom: 30px;
-		position: relative;
+//		position: relative;
 		
 		h1 {
 			font-size: 40px;
 			
+//			border: 1px solid red;
+			
 			line-height: 40px;  //for h1's that wrap to multilines
 			margin-bottom: -10px;
-//			margin-bottom: -54px;
 			padding-bottom: 20px;
 			padding-top: 20px;
 			padding-left: 20px;
@@ -270,7 +271,7 @@
 //				display: block;
 			}
 			
-			input[type="text"],input[type="password"] {
+			input[type="text"],input[type="password"], textarea {
 				width: 95%;
 				font-size: 13px;
 				padding: 3px 5px;
@@ -325,6 +326,8 @@
 			border-top: 5px solid #fff;
 			padding-top: 30px;
 			padding-bottom: 25px;
+			
+//			border: 1px solid blue;
 						
 			article[itemtype="http://data-vocabulary.org/Organization"] {
 				background-image: url(../images/white_bg.png);

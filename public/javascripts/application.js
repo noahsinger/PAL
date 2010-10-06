@@ -96,9 +96,6 @@ function clear_markers( ) {
 }
 
 $(document).ready( function( ) {
-    // reveal the notice p
-    $("#notice").show("slow");
-
     // setup location map for showing
     if( $("#map_for_showing").size( ) > 0 ) {
         showable_map( );
@@ -116,15 +113,15 @@ $(document).ready( function( ) {
 		});
 	}
 
-    //setup album lightbox
-		if( $("#album").size( ) > 0 ) {
-	    $("#album a").has("img").lightBox({fixedNavigation:true,
-	                            imageBlank: '../../../../images/lightbox-blank.gif',
-	                            imageLoading: '../../../../images/lightbox-ico-loading.gif',
-		                        imageBtnClose: '../../../../images/lightbox-btn-close.gif',
-		                        imageBtnPrev: '../../../../images/lightbox-btn-prev.gif',
-		                        imageBtnNext: '../../../../images/lightbox-btn-next.gif'});
-		}
+   //setup album lightbox
+	if( $("#album").size( ) > 0 ) {
+    $("#album a").has("img").lightBox({fixedNavigation:true,
+					                            imageBlank: '../../../../images/lightbox-blank.gif',
+					                            imageLoading: '../../../../images/lightbox-ico-loading.gif',
+							                        imageBtnClose: '../../../../images/lightbox-btn-close.gif',
+							                        imageBtnPrev: '../../../../images/lightbox-btn-prev.gif',
+							                        imageBtnNext: '../../../../images/lightbox-btn-next.gif'});
+	}
 	
 	setTimeout( function( ) {$("#notice").slideDown("slow")}, 1000 );
 	setTimeout( function( ) {$("#alert").slideDown("slow")}, 1000 );
