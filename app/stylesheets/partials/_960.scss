@@ -414,6 +414,22 @@
 		}
 	}	
 	
+	div.admin {
+		$color: #ff6;
+		color: $color;
+		
+		h1 {
+			border-top: 2px solid $color;
+			padding-bottom: 20px;
+			margin-bottom: 10px;
+		}
+		
+		a {
+			color: $color;
+			font-weight: bold;
+		}
+	}
+	
 	.who_we_are {
 		color: #69C7DE;
 		
