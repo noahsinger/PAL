@@ -95,6 +95,29 @@ function clear_markers( ) {
     return false;
 }
 
+function h1_positioning( ) {
+	//fix main_content h1 vertical spacing
+	if( $("#main_content>h1").size( ) > 0 ) {
+		var bottom_margin = -($("#main_content>h1").innerHeight( ) - 49);
+		
+		if( $("#contact_info").css("display") == "block" ) {
+			bottom_margin += $("#contact_info").innerHeight( ) - 8;
+			// $("#contact_info").css( "padding-top", parseInt($("#contact_info").css("padding-top")) + 10 );
+			$("#contact_info").css( "padding-top", 40 );
+		}
+		
+		$("#main_content>h1").css( "margin-bottom", bottom_margin );
+		
+		// alert( "padding-top is " + $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) );
+	
+		if( parseInt($("#main_content>h1 ~ *").first( ).css("padding-top")) < -bottom_margin ) {
+			$("#main_content>h1 ~ *").first( ).css("padding-top", -bottom_margin);
+		}
+		
+		// alert( "height: " + $("#main_content>h1").innerHeight( ) + "\nbottom_margin: " + bottom_margin + "\ncontact_info visible: " + $("#contact_info").css("display") );
+	}
+}
+
 $(document).ready( function( ) {
     // setup location map for showing
     if( $("#map_for_showing").size( ) > 0 ) {
@@ -126,19 +149,27 @@ $(document).ready( function( ) {
 	setTimeout( function( ) {$("#notice").slideDown("slow")}, 1000 );
 	setTimeout( function( ) {$("#alert").slideDown("slow")}, 1000 );
 	
-	//fix main-content h1 vertical spacing
-	if( $("#main_content>h1").size( ) > 0 ) {
-		var bottom_margin = -($("#main_content>h1").outerHeight( ) - 54);
-		$("#main_content>h1").css( "margin-bottom", bottom_margin );
-		
-		// alert( "padding-top is " + $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) );
+	h1_positioning( );
 	
-		if( $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) < -bottom_margin ) {
-			$("#main_content>h1 ~ *").first( ).css("padding-top", -bottom_margin);
-		}
-		
-		// alert( "height: " + $("#main_content>h1").outerHeight( ) + "\nbottom_margin: " + bottom_margin );
-	}
+	// //fix main_content h1 vertical spacing
+	// 	if( $("#main_content>h1").size( ) > 0 ) {
+	// 		var bottom_margin = -($("#main_content>h1").innerHeight( ) - 49);
+	// 		
+	// 		if( $("#contact_info").css("display") == "block" ) {
+	// 			bottom_margin += $("#contact_info").innerHeight( ) - 8;
+	// 			$("#contact_info").css( "padding-top", parseInt($("#contact_info").css("padding-top")) + 10 );
+	// 		}
+	// 		
+	// 		$("#main_content>h1").css( "margin-bottom", bottom_margin );
+	// 		
+	// 		// alert( "padding-top is " + $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) );
+	// 	
+	// 		if( parseInt($("#main_content>h1 ~ *").first( ).css("padding-top")) < -bottom_margin ) {
+	// 			$("#main_content>h1 ~ *").first( ).css("padding-top", -bottom_margin);
+	// 		}
+	// 		
+	// 		// alert( "height: " + $("#main_content>h1").innerHeight( ) + "\nbottom_margin: " + bottom_margin + "\ncontact_info visible: " + $("#contact_info").css("display") );
+	// 	}
 	
 	//zebra stripe the tables
 	$("table tr:odd").each( function( ) {
@@ -146,7 +177,9 @@ $(document).ready( function( ) {
 	});
 });
 
-
+$(window).resize( function( ) {
+	h1_positioning( );
+});
 
 
 
