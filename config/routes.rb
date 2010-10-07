@@ -1,9 +1,10 @@
 PAL::Application.routes.draw do
-  #get "user_sessions/new"
   get "home/index"
   get "home/template"
 
   match 'logout' => 'user_sessions#destroy'
+  
+  resources :roles
   
   resources :user_sessions
 

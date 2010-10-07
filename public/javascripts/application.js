@@ -151,6 +151,7 @@ $(document).ready( function( ) {
 	
 	h1_positioning( );
 	
+<<<<<<< HEAD
 	// //fix main_content h1 vertical spacing
 	// 	if( $("#main_content>h1").size( ) > 0 ) {
 	// 		var bottom_margin = -($("#main_content>h1").innerHeight( ) - 49);
@@ -171,6 +172,8 @@ $(document).ready( function( ) {
 	// 		// alert( "height: " + $("#main_content>h1").innerHeight( ) + "\nbottom_margin: " + bottom_margin + "\ncontact_info visible: " + $("#contact_info").css("display") );
 	// 	}
 	
+=======
+>>>>>>> classcode10062010
 	//zebra stripe the tables
 	$("table tr:odd").each( function( ) {
 		$(this).addClass("odd");

@@ -3,6 +3,7 @@ TODO:
 finalize design
 
 develop:
+<<<<<<< HEAD
 - certification levels
 
 - certification
@@ -12,14 +13,31 @@ develop:
 - locations
 	- geolocation
 	- google
+=======
+x certification levels
+
+x certification
+	- card image upload / selection
+x sections
+x meetings
+x locations
+	x geolocation
+	x google
+>>>>>>> classcode10062010
 
 - class requests
 	- emails
 	
 - brands
+<<<<<<< HEAD
 - albums
 - photos
 	- image upload
+=======
+x albums
+x photos
+	x image upload
+>>>>>>> classcode10062010
 
 - trips
 	- image upload
@@ -41,8 +59,15 @@ develop:
 - social data
 	- ???
 
+<<<<<<< HEAD
 authentication
 authorization
+=======
+x authentication
+- authorization
+
+404, 500 pages
+>>>>>>> classcode10062010
 
 cacheing
 ux
@@ -50,5 +75,9 @@ seo
 
 data transfer
 
+<<<<<<< HEAD
 deployment
 
+=======
+deployment
+>>>>>>> classcode10062010

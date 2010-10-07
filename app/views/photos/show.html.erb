@@ -1,8 +1,13 @@
 <h1><%= @photo.title %></h1>
 
 <p>
+<<<<<<< HEAD
 	<%# image_tag @photo.image.url, :width => '100' %>
 	<%= image_tag @photo.image.url(:thumb) %>
+=======
+	<%= image_tag @photo.image.url, :width => '100' %>
+	<%# image_tag @photo.image.url(:thumb) %>
+>>>>>>> classcode10062010
 	
   <%= @photo.description %>
 </p>

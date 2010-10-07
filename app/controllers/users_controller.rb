@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  filter_resource_access
+
   # GET /users
   # GET /users.xml
   def index
@@ -57,6 +59,8 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
+
+    params[:user][:role_ids] ||= []
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

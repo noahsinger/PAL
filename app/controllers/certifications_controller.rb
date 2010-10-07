@@ -1,4 +1,6 @@
 class CertificationsController < ApplicationController
+  filter_resource_access
+
   # GET /certifications
   # GET /certifications.xml
   def index

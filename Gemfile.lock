@@ -35,6 +35,7 @@ GEM
     builder (2.1.2)
     compass (0.10.5)
       haml (>= 3.0.4)
+    declarative_authorization (0.5.1)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     haml (3.0.18)
@@ -84,6 +85,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic
   compass (>= 0.10.5)
+  declarative_authorization
   infinity_test
   paperclip
   rails (= 3.0.0)
