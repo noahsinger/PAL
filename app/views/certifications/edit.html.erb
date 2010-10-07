@@ -1,0 +1,12 @@
+<h1>Editing certification</h1>
+
+<%= render 'form' %>
+
+<% content_for :pos2 do %>
+	<div class="admin">
+		<h1>Admin</h1>
+		<%= link_to 'Back', certifications_path %><br/>
+		<%= link_to 'Show', certification_sections_path(@certification) %>
+	</div>
+<% end %>
+

@@ -1,0 +1,44 @@
+// smaller desktop (1024) /////////////////////////////////////
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.narrow {
+		width: 1014px;
+	}
+	
+	#page {
+		background-image: url(../images/starburst1024.svg);
+	}
+	
+	header {
+		h1 {
+			font-size: 4em;
+			margin-top: 30px;
+		}
+	}
+		
+	#search_subscribe {
+		display: none;
+	}
+	
+	#content {
+		.media {			
+			@include push(2);
+			
+			p.description {
+				display: block;
+			}
+		}
+		
+		#contact_info {
+			display: none;
+		}
+		
+		.contact_us {
+			border-top: 2px solid #fff;
+			margin-top: 10px;
+			padding-top: 20px;
+		}
+	}
+
+	footer {
+	}
+}

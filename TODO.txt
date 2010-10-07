@@ -1,0 +1,55 @@
+TODO: 
+
+finalize design
+
+develop:
+x certification levels
+
+x certification
+	- card image upload / selection
+x sections
+x meetings
+x locations
+	x geolocation
+	x google
+
+- class requests
+	- emails
+	
+- brands
+x albums
+x photos
+	x image upload
+
+- trips
+	- image upload
+
+- subscribers
+	- email
+- newsletters
+- newsletter sections
+	- image upload
+	- email
+	
+- articles
+	- image upload
+
+- staff
+	- image upload
+- contacts
+	- email
+- social data
+	- ???
+
+x authentication
+- authorization
+
+404, 500 pages
+
+cacheing
+ux
+seo
+
+data transfer
+
+deployment

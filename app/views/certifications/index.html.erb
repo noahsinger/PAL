@@ -1,0 +1,31 @@
+<h1>Certifications</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+
+<% @certifications.each do |certification| %>
+  <tr>
+    <td><%= link_to certification.name, certification_sections_path(certification) %></td>
+    <td><%= truncate certification.description %></td>
+    <% if permitted_to? :edit, certification %>
+        <td><%= link_to 'Edit', edit_certification_path(certification) %></td>
+    <% end %>
+    <% if permitted_to? :destroy, certification %>
+        <td><%= link_to 'Destroy', certification, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% content_for :pos2 do %>
+	<div class="admin">
+		<h1>Admin</h1>
+		<%= link_to 'New Certification', new_certification_path %>
+	</div>
+<% end %>

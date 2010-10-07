@@ -1,0 +1,775 @@
+/////////////////////////////////////////////////////////
+// default 960 - 15 column view
+
+	// THE HEADER
+	header {		
+		@include column(15, last);
+		
+		#logo {
+			@include prepend(1);
+			@include column(3);
+		}		
+		
+		h1 {
+			@include column(6);
+		}
+		
+		#bouy {
+			@include prepend(1);
+			@include column(1);
+		}
+		
+		#header_forms {
+			@include column(2, last);
+			@include append(1);
+			
+			form {
+				@include column(2);
+			}
+		}
+	}
+	
+	//THE FLASH
+	#flash {
+		@include prepend(1);
+		@include column(14, last);
+				
+		.flash {
+			@include prepend(3);
+			@include column(6, last);
+			
+			display: none;
+		}
+	}
+		
+#content {
+	@include prepend(1);
+	@include column(13, last);
+	@include append(1);
+	@include prepend-top(1);
+		
+	#pos1 {	
+		@include column(2);
+	}
+	
+	#main_content {		
+		@include column(7);
+		
+		#error_explanation {
+			@include column(7, last);
+		}
+		
+		#contact_info {
+			display: none;
+		}
+	}
+	
+	#pos2 {
+		@include prepend(2);
+		@include column(2, last);
+	}
+	
+	#pos3 {
+		@include prepend(2);
+		@include column(2, last);
+	}
+	
+	#pos4 {
+		@include prepend(2);
+		@include column(2, last);
+	}
+		
+	#pos5 {
+		@include prepend(2);
+		@include column(2, last);
+	}
+}
+
+footer {
+	@include prepend(1);
+	@include column(13, last);
+	@include append(1);
+	
+	h1 {
+		@include column(1);
+	}
+	
+	ul {
+		@include column(2);
+	}
+	
+	#copyright {
+		@include column(4, last);
+	}
+}	
+
+/////////////////////////////////////////////////////////////
+
+
+// 320 iOS3 vertical (320) //////////////////////////////////
+@media screen and (max-width: 447px) {
+	//5
+	header {
+		@include prepend(0);
+		@include column(5, last);
+		@include append(0);
+		
+		#logo {
+			@include prepend(1);
+			@include column(3, last);
+			@include append(1);
+		}
+		
+		h1 {
+			@include column(5, last);
+		}
+		
+		#bouy {
+			display: none;
+		}
+					
+		#header_forms {
+			display: none;
+		}
+	}
+		
+	#flash_holder {
+		
+	}
+		
+	#flash {
+		width: 100%;
+		@include prepend(0);
+		
+		.flash {
+			@include prepend(0);
+			width: 100%;
+		}
+	}
+	
+	#search_subscribe {
+		@include prepend(0);
+		@include column(5);
+		
+		.search_subscribe {
+			@include prepend(0);
+		}
+	}
+	
+	#content {
+		@include prepend(0);
+		@include column(5, last);
+		@include append(0);
+		@include prepend-top(0);
+
+		#pos1 {
+			@include column(5, last);
+			@include append(0);
+		}
+
+		#main_content {
+			@include column(5, last);
+			
+			#error_explanation {
+				@include column(5, last);
+			}
+			
+			#contact_info {
+				@include column(5, last);
+				
+				article[itemtype="http://data-vocabulary.org/Organization"] {
+					@include column(5, last);
+				}
+			}
+		}
+
+		#pos2 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+
+		#pos3 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+		
+		#pos4 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+
+		#pos5 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+	}
+
+	footer {
+		@include prepend(0);
+		@include column(5, last);
+		@include append(0);
+
+		h1 {
+			@include column(1);
+			@include prepend(0);
+		}
+		
+		h1:first-child {
+			@include prepend(1);
+		}
+
+		ul {
+			@include column(1);
+			@include pull(1);
+		}
+
+		#copyright {
+			@include pull(4);
+			@include prepend(0);
+			@include column(5, last);
+		}
+	}
+}
+
+// 448 iphone horizontal (448) //////////////////////////////
+@media screen and (min-width: 448px) and (max-width: 639px) {
+	//5
+	header {
+		@include prepend(1);
+		@include column(5, last);
+		@include append(1);
+		
+		#logo {
+			@include prepend(0);
+			@include column(2);
+		}
+		
+		h1 {
+			@include column(3, last);
+		}
+		
+		#bouy {
+			display: none;
+		}
+					
+		#header_forms {
+			display: none;
+		}
+	}
+	
+	#flash {
+		@include prepend(0);
+		width: 100%;
+		
+		.flash {
+			width: 100%;
+			@include prepend(0);
+			display: none;
+		}
+	}
+	
+	#search_subscribe {
+		@include prepend(1);
+		@include column(5);
+		
+		.search_subscribe {
+			@include prepend(0);
+		}
+	}
+	
+	#content {
+		@include prepend(1);
+		@include column(5, last);
+		@include append(1);
+		@include prepend-top(1);
+
+		#pos1 {
+			@include column(5, last);
+			@include append(0);
+		}
+
+		#main_content {
+			@include column(5, last);
+			
+			#error_explanation {
+				@include column(5, last);
+			}
+			
+			#contact_info {
+				@include column(5, last);
+				
+				article[itemtype="http://data-vocabulary.org/Organization"] {
+					@include column(5, last);
+				}
+			}
+		}
+
+		#pos2 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+
+		#pos3 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+		
+		#pos4 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+
+		#pos5 {
+			@include prepend(0);
+			@include column(5, last);
+		}
+	}
+
+	footer {
+		@include prepend(1);
+		@include column(5, last);
+		@include append(1);
+
+		h1 {
+			@include column(1, last);
+			@include prepend(1);
+		}
+		
+		h1:first-child {
+			@include prepend(0);
+		}
+
+		ul {
+			@include column(1, last);
+			@include pull(1);
+		}
+
+		#copyright {
+			@include pull(5);
+			@include prepend(0);
+			@include column(5, last);
+		}
+	}
+}
+
+// 640 iOS4 vertical (640) //////////////////////////////////
+@media screen and (min-width: 640px) and (max-width: 767px) {
+	//8
+	header {
+		@include prepend(1);
+		@include column(8, last);
+		@include append(1);
+		
+		#logo {
+			@include prepend(0);
+			@include column(3);
+		}
+		
+		h1 {
+			@include column(5, last);
+		}
+		
+		#bouy {
+			display: none;
+		}
+					
+		#header_forms {
+			display: none;
+		}
+	}
+	
+	#flash {
+		@include prepend(1);
+		@include column(8, last);
+				
+		.flash {
+			@include prepend(2);
+			@include column(6, last);
+			display: none;
+		}
+	}
+	
+	#search_subscribe {
+		@include prepend(1);
+		@include column(8, last);
+		
+		.search_subscribe {
+			@include prepend(2);
+			@include column(6, last);
+		}
+	}
+	
+	#content {
+		@include prepend(1);
+		@include column(8, last);
+		@include append(1);
+		@include prepend-top(1);
+
+		#pos1 {
+			@include column(2);
+			@include append(0);
+		}
+
+		#main_content {
+			@include column(6, last);
+			
+			#error_explanation {
+				@include column(6, last);
+			}
+			
+			#contact_info {
+				@include column(6, last);
+				
+				article[itemtype="http://data-vocabulary.org/Organization"] {
+					@include column(6, last);
+				}
+			}
+		}
+
+		#pos2 {
+			@include column(6, last);
+		}
+
+		#pos3 {
+			@include column(6, last);
+		}
+		
+		#pos4 {
+			@include prepend(2);
+			@include column(6, last);
+		}
+
+		#pos5 {
+			@include column(6, last);
+		}
+	}
+
+	footer {
+		@include prepend(1);
+		@include column(8, last);
+		@include append(1);
+
+		h1 {
+			@include column(2);
+		}
+
+		ul {
+			@include column(2);
+			@include pull(2);
+		}
+
+		#copyright {
+			@include prepend(0);
+			@include column(1, last);
+		}
+	}
+}
+
+// 768 ipad vertical (768) //////////////////////////////////
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	//10
+	header {
+		@include prepend(1);
+		@include column(10, last);
+		@include append(1);
+		
+		#logo {
+			@include prepend(0);
+			@include column(3);
+		}
+		
+		h1 {
+			@include column(7, last);
+		}
+		
+		#bouy {
+			display: none;
+		}
+					
+		#header_forms {
+			display: none;
+		}
+	}
+	
+	#flash {
+		@include prepend(1);
+		@include column(10, last);
+				
+		.flash {
+			@include prepend(3);
+			@include column(7, last);
+			display: none;
+		}
+	}
+	
+	#search_subscribe {
+		@include prepend(1);
+		@include column(10, last);
+		
+		.search_subscribe {
+			@include prepend(2);
+			@include column(8, last);
+		}
+	}
+	
+	#content {
+		@include prepend(1);
+		@include column(10, last);
+		@include append(1);
+		@include prepend-top(1);
+
+		#pos1 {
+			@include column(2);
+			@include append(0);
+		}
+
+		#main_content {
+			@include column(8, last);
+			
+			#error_explanation {
+				@include column(8, last);
+			}
+			
+			#contact_info {
+				@include column(8, last);
+				
+				article[itemtype="http://data-vocabulary.org/Organization"] {
+					@include column(8, last);
+				}
+			}
+		}
+
+		#pos2 {
+			@include column(8);
+		}
+
+		#pos3 {
+			@include column(8, last);
+		}
+		
+		#pos4 {
+//			@include prepend(2);
+			@include column(8);
+		}
+
+		#pos5 {
+			@include column(8, last);
+		}
+	}
+
+	footer {
+		@include prepend(1);
+		@include column(10, last);
+		@include append(1);
+
+		h1 {
+			@include column(2);
+		}
+
+		ul {
+			@include column(2);
+			@include pull(2);
+		}
+
+		#copyright {
+			@include prepend(3);
+			@include column(1, last);
+		}
+	}
+}
+
+// default and iOS4 horizontal (960) /////////////////////////
+@media screen and (min-width: 960px) and (max-width: 1023px) {
+	// default, at top
+}
+
+// smaller desktop (1024) /////////////////////////////////////
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	header {
+		@include column(16, last);
+		
+		#logo {
+			@include column(3);
+		}
+		
+		h1 {
+			@include column(7);
+		}
+		
+		#bouy {
+			@include column(1);
+		}
+					
+		form {
+			@include column(2, last);
+		}
+	}
+	
+	#flash {
+		@include prepend(1);
+		@include column(15, last);
+				
+		.flash {
+			@include prepend(3);
+			@include column(8, last);
+			display: none;
+		}
+	}
+	
+	#content {
+		@include prepend(1);
+		@include column(14, last);
+		@include append(1);
+		@include prepend-top(1);
+
+		#pos1 {
+			@include column(2);
+		}
+
+		#main_content {
+			@include column(7);
+			
+			#error_explanation {
+				@include column(7, last);
+			}
+			
+			#contact_info {
+				display: none;
+			}
+		}
+
+		#pos2 {
+			@include prepend(0);
+			@include column(2);
+		}
+
+		#pos3 {
+			@include prepend(1);
+			@include column(2, last);
+		}
+		
+		#pos4 {
+			@include prepend(1);
+			@include column(2, last);
+		}
+
+		#pos5 {
+			@include prepend(1);
+			@include column(2, last);
+		}
+	}
+
+	footer {
+		@include prepend(1);
+		@include column(14, last);
+		@include append(1);
+
+		ul {
+			@include column(2);
+		}
+
+		#copyright {
+			@include prepend(1);
+			@include column(4, last);
+		}
+	}
+}
+
+// 1280 widescreen desktop (1280) /////////////////////////////////
+@media screen and (min-width: 1280px) {
+	//16
+	header {
+		@include prepend(2);
+		@include column(16, last);
+		@include append(2);
+		
+		#logo {
+			@include prepend(0);
+			@include column(3);
+		}
+		
+		h1 {
+			@include column(9);
+		}
+		
+		#bouy {
+			@include prepend(1);
+			@include column(1);
+		}
+		
+		#header_forms {
+			@include column(1, last);
+			@include append(1);
+		}
+	}
+	
+	#flash {
+		@include prepend(2);
+		@include column(16, last);
+				
+		.flash {
+			@include prepend(3);
+			@include column(9, last);
+			display: none;
+		}
+	}
+		
+	#content {
+		@include prepend(2);
+		@include column(16, last);
+		@include append(2);
+		@include prepend-top(1);
+
+		#pos1 {
+			@include column(2);
+			@include append(1);
+		}
+
+		#main_content {
+			@include column(7);
+			
+			#error_explanation {
+				@include column(7, last);
+			}
+			
+			#contact_info {
+				display: none;
+			}
+		}
+
+		#pos2 {
+			@include prepend(0);
+			@include column(2);
+		}
+
+		#pos3 {
+			@include prepend(2);
+			@include column(2, last);
+		}
+		
+		#pos4 {
+			@include prepend(2);
+			@include column(2, last);
+		}
+
+		#pos5 {
+			@include prepend(2);
+			@include column(2, last);
+		}
+	}
+
+	footer {
+		@include prepend(2);
+		@include column(16, last);
+		@include append(2);
+
+		ul {
+			@include column(2);
+		}
+
+		#copyright {
+			@include prepend(3);
+			@include column(4, last);
+		}
+	}	
+}

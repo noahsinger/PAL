@@ -1,0 +1,24 @@
+<h1><%= @section.certification.name %></h1>
+
+<p>
+  <%= @section.description %>
+</p>
+
+<table>
+	<tr>
+		<th>Description</th>
+		<th></th>
+		<th></th>
+	</tr>
+<% @section.meetings.each do |meeting| %>
+	<tr>
+		<td><%= link_to meeting.description, meeting %></td>
+		<td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+		<td><%= link_to 'Destroy', meeting, :method => :delete, :confirm => 'Are you sure?' %></td>
+	</tr>        
+<% end %>
+</table>
+
+<%= link_to 'Add a Meeting to this Class', new_meeting_path( :section_id => @section ) %> |
+<%= link_to 'Edit this Class', edit_certification_section_path(@certification,@section) %> |
+<%= link_to "Back to #{@certification.name} classes", certification_sections_path(@certification) %>

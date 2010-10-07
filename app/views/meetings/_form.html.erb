@@ -1,0 +1,47 @@
+<%= form_for(@meeting) do |f| %>
+  <% if @meeting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+      <ul>
+	      <% @meeting.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+	<%= f.hidden_field :section_id %>
+
+  <div class="field">
+    <%= f.label :location, "Choose a location: " %>
+    <select name="meeting[location_id]" id="meeting_location">
+        <option value=""></option>
+        <option value="new">Create a new Location</option>
+        <%= options_for_select Location.all.map {|loc| [loc.name, loc.id]}, :selected => @meeting.location ? @meeting.location.id : "" %>
+    </select>
+  </div>
+
+  <div id="create_location">
+    <div class="field">
+        <label for="meeting_location_name">Location name:</label>
+        <input type="text" name="location[name]" id="location_name"/>
+        <input type="hidden" name="location[lat]" id="location_lat"/>
+        <input type="hidden" name="location[lng]" id="location_lng"/>
+    </div>
+    <div id="map_for_editing"></div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

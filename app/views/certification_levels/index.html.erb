@@ -1,0 +1,22 @@
+<h1>Certification Levels</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @certification_levels.each do |certification_level| %>
+  <tr>
+    <td><%= certification_level.name %></td>
+    <td><%= link_to 'Edit', edit_certification_level_path(certification_level) %></td>
+    <td><%= link_to 'Destroy', certification_level, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Certification level', new_certification_level_path %>

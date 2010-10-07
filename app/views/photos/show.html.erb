@@ -1,0 +1,11 @@
+<h1><%= @photo.title %></h1>
+
+<p>
+	<%= image_tag @photo.image.url, :width => '100' %>
+	<%# image_tag @photo.image.url(:thumb) %>
+	
+  <%= @photo.description %>
+</p>
+
+<%= link_to 'Edit', edit_album_photo_path(@album,@photo) %> |
+<%= link_to 'Back', album_photos_path(@album) %>

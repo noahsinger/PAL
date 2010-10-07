@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  title: Cozumel
+  description: Our trip to Mexico
+
+two:
+  id: 2
+  title: The Pool
+  description: Not much fun but oh well.

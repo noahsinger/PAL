@@ -1,0 +1,35 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag 'jquery.lightbox-0.5' %>
+    <%= javascript_include_tag 'jquery.lightbox-0.5.pack' %>
+<% end %>
+
+
+<h1>Listing photos</h1>
+
+<div id="album">
+    <table>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= link_to( image_tag( photo.image.url, :height => 30 ), photo.image.url, :title => photo.description ) %></td>
+		<!--<td><%# link_to( image_tag( photo.image.url(:tiny) ), photo.image.url(:display), :title => photo.description ) %></td>-->
+        <td><%= link_to photo.title, [@album,photo] %></td>
+        <td><%= truncate photo.description %></td>
+        <td><%= link_to 'Edit', edit_album_photo_path(@album,photo) %></td>
+        <td><%= link_to 'Destroy', [@album,photo], :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+</div>
+<br />
+
+<%= link_to 'Back to Albums', albums_path %> |
+<%= link_to 'New Photo', new_album_photo_path(@album) %>

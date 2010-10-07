@@ -1,0 +1,27 @@
+<h1><%= @certification.name %> Classes</h1>
+
+<p><%= @certification.description %></p>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sections.each do |section| %>
+  <tr>
+    <td><%= section.description %></td>
+    <td><%= link_to 'Show', [@certification,section] %></td>
+    <td><%= link_to 'Edit', edit_certification_section_path(@certification,section) %></td>
+    <td><%= link_to 'Destroy', [@certification,section], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back to Certifications', certifications_path %> |
+<%= link_to "Edit the #{@certification.name} certification", edit_certification_path(@certification) %> |
+<%= link_to 'New Section', new_certification_section_path(@certification) %>
