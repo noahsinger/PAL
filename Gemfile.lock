@@ -40,8 +40,6 @@ GEM
       abstract (>= 1.0.0)
     haml (3.0.18)
     i18n (0.4.1)
-    infinity_test (0.2.0)
-      watchr (>= 0.7)
     mail (2.2.5)
       activesupport (>= 2.3.6)
       mime-types
@@ -76,7 +74,6 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
-    watchr (0.7)
 
 PLATFORMS
   ruby
@@ -86,7 +83,6 @@ DEPENDENCIES
   authlogic
   compass (>= 0.10.5)
   declarative_authorization
-  infinity_test
   paperclip
   rails (= 3.0.0)
   sqlite3-ruby

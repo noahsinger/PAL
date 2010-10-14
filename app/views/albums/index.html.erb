@@ -1,25 +1,23 @@
-<h1>Listing albums</h1>
+<h1>Diving Albums</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<section id="albums">
+    <% @albums.each do |album| %>
+      <article>
+        <%= link_to( image_tag( album.photos.first.image.url, :width => 90, :class => 'framed_image' ), album_photos_path(album) ) %>
+        <h2><%= link_to album.title, album_photos_path(album) %></h2>
 
-<% @albums.each do |album| %>
-  <tr>
-    <td><%= album.title %></td>
-    <td><%= album.description %></td>
-    <td><%= link_to 'Show', album_photos_path(album) %></td>
-    <td><%= link_to 'Edit', edit_album_path(album) %></td>
-    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+        <% if permitted_to? [:edit,:destroy], album %>
+            <p>
+                <%= link_to 'Edit', edit_album_path(album) %>
+                <%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %>
+            </p>
+        <% end %>
+      </article>
+    <% end %>
+</section>
 
 <br />
 
-<%= link_to 'New Album', new_album_path %>
+<% if permitted_to? :new, Album.new %>
+    <%= link_to 'New Album', new_album_path %>
+<% end %>

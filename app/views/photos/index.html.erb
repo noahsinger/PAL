@@ -4,37 +4,30 @@
 <% end %>
 
 
-<h1>Listing photos</h1>
+<h1><%= @album.title %></h1>
 
-<div id="album">
-    <table>
-      <tr>
-        <th></th>
-        <th>Title</th>
-        <th>Description</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
+<p>
+  <%= @album.description %>
+</p>
 
+<section id="album">
     <% @photos.each do |photo| %>
-      <tr>
-<<<<<<< HEAD
-        <!--<td><%# link_to( image_tag( photo.image.url, :height => 30 ), photo.image.url, :title => photo.description ) %></td>-->
-				<td><%= link_to( image_tag( photo.image.url(:tiny) ), photo.image.url(:display), :title => photo.description ) %></td>
-=======
-        <td><%= link_to( image_tag( photo.image.url, :height => 30 ), photo.image.url, :title => photo.description ) %></td>
-		<!--<td><%# link_to( image_tag( photo.image.url(:tiny) ), photo.image.url(:display), :title => photo.description ) %></td>-->
->>>>>>> classcode10062010
-        <td><%= link_to photo.title, [@album,photo] %></td>
-        <td><%= truncate photo.description %></td>
-        <td><%= link_to 'Edit', edit_album_photo_path(@album,photo) %></td>
-        <td><%= link_to 'Destroy', [@album,photo], :confirm => 'Are you sure?', :method => :delete %></td>
-      </tr>
+        <article>
+            <%= link_to( image_tag( photo.image.url, :width => 90, :class => 'framed_image' ), photo.image.url, :title => photo.description ) %>
+            <!--<%# link_to( image_tag( photo.image.url(:tiny) ), photo.image.url(:display), :title => photo.description ) %>-->
+            <h2><%= link_to photo.title, [@album,photo] %></h2>
+            <% if permitted_to? [:edit,:destroy], photo %>
+                <p>
+                    <%= link_to 'Edit', edit_album_photo_path(@album,photo) %>
+                    <%= link_to 'Destroy', [@album,photo], :confirm => 'Are you sure?', :method => :delete %>
+                </p>
+            <% end %>
+        </article>
     <% end %>
-    </table>
-</div>
+</section>
 <br />
 
-<%= link_to 'Back to Albums', albums_path %> |
-<%= link_to 'New Photo', new_album_photo_path(@album) %>
+<%= link_to 'Back to Albums', albums_path %>
+<% if permitted_to? :new, Photo.new %>
+    | <%= link_to 'New Photo', new_album_photo_path(@album) %>
+<% end %>

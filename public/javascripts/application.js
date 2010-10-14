@@ -151,29 +151,6 @@ $(document).ready( function( ) {
 	
 	h1_positioning( );
 	
-<<<<<<< HEAD
-	// //fix main_content h1 vertical spacing
-	// 	if( $("#main_content>h1").size( ) > 0 ) {
-	// 		var bottom_margin = -($("#main_content>h1").innerHeight( ) - 49);
-	// 		
-	// 		if( $("#contact_info").css("display") == "block" ) {
-	// 			bottom_margin += $("#contact_info").innerHeight( ) - 8;
-	// 			$("#contact_info").css( "padding-top", parseInt($("#contact_info").css("padding-top")) + 10 );
-	// 		}
-	// 		
-	// 		$("#main_content>h1").css( "margin-bottom", bottom_margin );
-	// 		
-	// 		// alert( "padding-top is " + $("#main_content>h1 ~ *").first( ).css("padding-top").substring( 0, $("#main_content>h1 ~ *").first( ).css("padding-top").indexOf( "px" ) ) );
-	// 	
-	// 		if( parseInt($("#main_content>h1 ~ *").first( ).css("padding-top")) < -bottom_margin ) {
-	// 			$("#main_content>h1 ~ *").first( ).css("padding-top", -bottom_margin);
-	// 		}
-	// 		
-	// 		// alert( "height: " + $("#main_content>h1").innerHeight( ) + "\nbottom_margin: " + bottom_margin + "\ncontact_info visible: " + $("#contact_info").css("display") );
-	// 	}
-	
-=======
->>>>>>> classcode10062010
 	//zebra stripe the tables
 	$("table tr:odd").each( function( ) {
 		$(this).addClass("odd");

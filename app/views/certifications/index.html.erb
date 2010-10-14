@@ -5,22 +5,10 @@
     <th>Name</th>
     <th>Description</th>
     <th></th>
-<<<<<<< HEAD
-    <th></th>
-    <th></th>
-=======
->>>>>>> classcode10062010
   </tr>
 
 <% @certifications.each do |certification| %>
   <tr>
-<<<<<<< HEAD
-    <td><%= certification.name %></td>
-    <td><%= truncate certification.description %></td>
-    <td><%= link_to 'Show', certification_sections_path(certification) %></td>
-    <td><%= link_to 'Edit', edit_certification_path(certification) %></td>
-    <td><%= link_to 'Destroy', certification, :confirm => 'Are you sure?', :method => :delete %></td>
-=======
     <td><%= link_to certification.name, certification_sections_path(certification) %></td>
     <td><%= truncate certification.description %></td>
     <% if permitted_to? :edit, certification %>
@@ -29,7 +17,6 @@
     <% if permitted_to? :destroy, certification %>
         <td><%= link_to 'Destroy', certification, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end %>
->>>>>>> classcode10062010
   </tr>
 <% end %>
 </table>

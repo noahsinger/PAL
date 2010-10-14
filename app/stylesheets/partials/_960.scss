@@ -13,7 +13,7 @@
 	.narrow {
 		width: 950px; //width - 10 so no gutter on last column
 		margin: 0 auto;
-	}
+    }
 
 	// THE HEADER
 	header {		
@@ -412,7 +412,49 @@
 			  visibility: hidden;
 			}
 		}
-	}	
+
+        #album, #albums {
+            background-image: url( ../images/white_bg.png );
+            padding: 0 20px;
+            margin-top: 0px;
+            
+            article {
+                width: 120px;
+                float: left;
+                margin: 0 10px 0 0;
+                padding-bottom: 20px;
+
+                h2 {
+                    text-align: center;
+                    font-size: 1.2em;
+                    padding: 0 10px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+
+                p {
+                    background-image: none;
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        #albums:after, #album:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .framed_image {
+            background-color: #fff;
+            padding: 15px;
+        }
+	}
 	
 	div.admin {
 		$color: #ff6;

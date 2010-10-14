@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  filter_resource_access
+
   # GET /albums
   # GET /albums.xml
   def index

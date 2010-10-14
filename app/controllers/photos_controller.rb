@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  filter_resource_access
+
   before_filter :load_album
 
   def load_album

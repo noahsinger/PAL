@@ -11,14 +11,19 @@ class CertificationsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:certifications)
   end
 
-  test "should get new" do
+  test "as admin should get new" do
     login_as_admin
     
     get :new
     assert_response :success
   end
 
-  test "should create certification" do
+  test "as user should not get new" do
+    get :new
+    assert_redirected_to root_path
+  end
+
+  test "as admin should create certification" do
     login_as_admin
     
     assert_difference('Certification.count') do
@@ -28,21 +33,36 @@ class CertificationsControllerTest < ActionController::TestCase
     assert_redirected_to certification_sections_path(assigns(:certification))
   end
 
-  test "should get edit" do
+  test "as user should not create certification" do
+    post :create, :certification => {:name => "Sample 3", :description => "This is the description", :certification_level_id => 1}
+    assert_redirected_to root_path
+  end
+
+  test "as admin should get edit" do
     login_as_admin
     
     get :edit, :id => @certification.to_param
     assert_response :success
   end
 
-  test "should update certification" do
+  test "as user should not get edit" do
+    get :edit, :id => @certification.to_param
+    assert_redirected_to root_path
+  end
+
+  test "as admin should update certification" do
     login_as_admin
     
     put :update, :id => @certification.to_param, :certification => @certification.attributes
     assert_redirected_to certification_sections_path(assigns(:certification))
   end
 
-  test "should destroy certification" do
+  test "as user should not update certification" do
+    put :update, :id => @certification.to_param, :certification => @certification.attributes
+    assert_redirected_to root_path
+  end
+
+  test "as admin should destroy certification" do
     login_as_admin
     
     assert_difference('Certification.count', -1) do
@@ -50,5 +70,10 @@ class CertificationsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to certifications_path
+  end
+
+  test "as user should not destroy certification" do
+    delete :destroy, :id => @certification.to_param
+    assert_redirected_to root_path
   end
 end

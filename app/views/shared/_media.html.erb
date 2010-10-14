@@ -1,7 +1,9 @@
+<% photo = Photo.first(:conditions => [ "id >= ?", rand(Photo.count)]) %>
+
 <div class="media">
 	<h1>Media</h1>
-	<p><%= image_tag 'sample_image.png' %></p>
-	<h2>Lady Diving</h2>
-	<p class="description">Some lady diving somewhere that looks really nice.  What are those things around her?  Fish?  I think they are.</p>
+	<p><%= image_tag photo.image.url, :width => 90 %></p>
+	<h2><%= photo.title %></h2>
+	<p class="description"><%= photo.description %></p>
 	<p><%= link_to 'Photo Albums', albums_path %></p>
 </div>
