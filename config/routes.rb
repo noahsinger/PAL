@@ -1,4 +1,6 @@
 PAL::Application.routes.draw do
+  resources :contacts
+
   resources :roles
 
   #get "user_sessions/new"

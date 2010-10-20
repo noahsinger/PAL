@@ -15,5 +15,5 @@ gem "declarative_authorization"
 gem "compass", ">= 0.10.5"
 
 group :development, :test do
-  #gem 'infinity_test'
+  gem 'infinity_test'
 end

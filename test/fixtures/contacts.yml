@@ -1,0 +1,11 @@
+one:
+  to: development@diverpal.com
+  from: professorsinger@ingenio.us.com
+  subject: Diving
+  body: I like diving.
+
+two:
+  to: professorsinger@ingenio.us.com
+  from: development@diverpal.com
+  subject: Glad to hear it.
+  body: We like diving too.
