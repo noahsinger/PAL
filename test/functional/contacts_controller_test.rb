@@ -21,7 +21,7 @@ class ContactsControllerTest < ActionController::TestCase
       post :create, :contact => @contact.attributes
     end
 
-    assert_redirected_to contact_path(assigns(:contact))
+    assert_redirected_to root_path
   end
 
   test "should show contact" do
