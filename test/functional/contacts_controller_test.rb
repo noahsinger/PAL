@@ -5,45 +5,70 @@ class ContactsControllerTest < ActionController::TestCase
     @contact = contacts(:one)
   end
 
-  test "should get index" do
+  test "admin should get index" do
+    login_as_admin
+    
     get :index
     assert_response :success
     assert_not_nil assigns(:contacts)
   end
+  
+  test "user should not get index" do
+    get :index
+    assert_redirected_to root_path
+  end
 
-  test "should get new" do
+  test "admin should not get new" do
+    login_as_admin
+    
+    get :new
+    assert_redirected_to root_path
+  end
+  
+  test "user should get new" do
     get :new
     assert_response :success
   end
 
-  test "should create contact" do
+  test "admin should not create contact" do
+    login_as_admin
+    
+    post :create, :contact => @contact.attributes
+    assert_redirected_to root_path
+  end
+  
+  test "user should create contact" do
     assert_difference('Contact.count') do
       post :create, :contact => @contact.attributes
     end
-
+    
     assert_redirected_to root_path
   end
 
-  test "should show contact" do
+  test "admin should show contact" do
+    login_as_admin
+    
     get :show, :id => @contact.to_param
     assert_response :success
   end
-
-  test "should get edit" do
-    get :edit, :id => @contact.to_param
-    assert_response :success
+  
+  test "user should not show contact" do
+    get :show, :id => @contact.to_param
+    assert_redirected_to root_path
   end
 
-  test "should update contact" do
-    put :update, :id => @contact.to_param, :contact => @contact.attributes
-    assert_redirected_to contact_path(assigns(:contact))
-  end
-
-  test "should destroy contact" do
+  test "admin should destroy contact" do
+    login_as_admin
+    
     assert_difference('Contact.count', -1) do
       delete :destroy, :id => @contact.to_param
     end
 
     assert_redirected_to contacts_path
+  end
+  
+  test "user should not destroy contact" do
+    delete :destroy, :id => @contact.to_param
+    assert_redirected_to root_path
   end
 end

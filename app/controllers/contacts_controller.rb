@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  filter_resource_access
+  
   # GET /contacts
   # GET /contacts.xml
   def index
