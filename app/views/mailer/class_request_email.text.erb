@@ -1,0 +1,14 @@
+A new class request has been submitted on the diverpal.com website.
+
+The request was sent from <%= @class_request.from %>.
+
+They request that the time for the class be:
+<%= @class_request.time %>
+
+<% unless @class_request.notes.blank? %>
+Notes:
+<%= @class_request.notes %>
+<% end %>
+
+To view this request go to:
+<%= class_request_url(@class_request) %>

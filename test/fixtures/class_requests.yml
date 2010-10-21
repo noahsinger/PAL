@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  certification: 
-  from: MyString
-  time: MyString
-  notes: MyText
+  certification_id: 1 
+  from: professorsinger@ingenio.us.com
+  time: sometime
+  notes: on paper
 
 two:
-  certification: 
-  from: MyString
-  time: MyString
-  notes: MyText
+  certification_id: 2 
+  from: noah@mydomain.com
+  time: another time
+  notes: these are notes.

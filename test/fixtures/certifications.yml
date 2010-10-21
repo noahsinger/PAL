@@ -5,6 +5,7 @@ one:
   certification_level_id: 1
 
 two:
+  id: 2
   name: Sample Cert 2
   description: This is another sample certification.
   certification_level_id: 2

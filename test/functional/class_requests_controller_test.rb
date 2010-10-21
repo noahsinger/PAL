@@ -12,7 +12,7 @@ class ClassRequestsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, :certification_id => @class_request.certification.id
     assert_response :success
   end
 
@@ -21,22 +21,12 @@ class ClassRequestsControllerTest < ActionController::TestCase
       post :create, :class_request => @class_request.attributes
     end
 
-    assert_redirected_to class_request_path(assigns(:class_request))
+    assert_redirected_to certification_sections_path(:certification_id => @class_request.certification.id)
   end
 
   test "should show class_request" do
     get :show, :id => @class_request.to_param
     assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, :id => @class_request.to_param
-    assert_response :success
-  end
-
-  test "should update class_request" do
-    put :update, :id => @class_request.to_param, :class_request => @class_request.attributes
-    assert_redirected_to class_request_path(assigns(:class_request))
   end
 
   test "should destroy class_request" do

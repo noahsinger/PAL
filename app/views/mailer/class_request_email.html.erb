@@ -1,0 +1,23 @@
+<h1>Class Request</h1>
+
+<p>
+	The request was sent from <%= mail_to @class_request.from %>.
+</p>
+
+<p>
+	They request that the time for the class be:
+	<em><%= @class_request.time %></em>
+</p>
+
+
+<% unless @class_request.notes.blank? %>
+	<p>
+		<strong>Notes:</strong>
+		<%= @class_request.notes %>
+	</p>
+<% end %>
+
+<p>
+	To view this request go to:
+	<%= link_to 'Diverpal.com', class_request_url(@class_request) %>
+</p>
