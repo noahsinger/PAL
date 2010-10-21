@@ -1,4 +1,5 @@
 class Certification < ActiveRecord::Base
+  has_many :class_requests
   has_many :sections
   belongs_to :certification_level
 

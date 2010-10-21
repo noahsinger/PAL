@@ -20,6 +20,10 @@
 <% end %>
 </table>
 
+<p>
+	<%= link_to 'Request a Class', new_class_request_path(:certification_id => @certification) %>
+</p>
+
 <br />
 
 <%= link_to 'Back to Certifications', certifications_path %> |

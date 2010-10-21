@@ -1,0 +1,30 @@
+<%= form_for(@class_request) do |f| %>
+  <% if @class_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@class_request.errors.count, "error") %> prohibited this class_request from being saved:</h2>
+
+      <ul>
+      <% @class_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<%= f.hidden_field :certification_id, {:value => @certification.id} %>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

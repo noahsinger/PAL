@@ -1,0 +1,27 @@
+<h1>Listing class_requests</h1>
+
+<table>
+  <tr>
+    <th>Certification</th>
+    <th>Time</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @class_requests.each do |class_request| %>
+  <tr>
+    <td><%= class_request.certification.name %></td>
+    <td><%= class_request.time %></td>
+    <td><%= truncate class_request.notes %></td>
+    <td><%= link_to 'Show', class_request %></td>
+    <td><%= link_to 'Edit', edit_class_request_path(class_request) %></td>
+    <td><%= link_to 'Destroy', class_request, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Class request', new_class_request_path %>

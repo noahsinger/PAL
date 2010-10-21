@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  certification: 
+  from: MyString
+  time: MyString
+  notes: MyText
+
+two:
+  certification: 
+  from: MyString
+  time: MyString
+  notes: MyText
