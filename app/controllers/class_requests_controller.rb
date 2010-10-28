@@ -45,7 +45,7 @@ class ClassRequestsController < ApplicationController
 
     respond_to do |format|
       if @class_request.save
-        Mailer.class_request_email(@class_request).deliver
+        Mailer.delay.class_request_email(@class_request)
         format.html { redirect_to(certification_sections_url(@class_request.certification), :notice => 'Your class request was successfully sent.') }
         format.xml  { render :xml => @class_request, :status => :created, :location => @class_request }
       else

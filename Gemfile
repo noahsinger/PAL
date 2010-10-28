@@ -5,6 +5,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "paperclip"
 gem "authlogic"
 gem "declarative_authorization"
+gem "delayed_job", :git => 'http://github.com/collectiveidea/delayed_job.git'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

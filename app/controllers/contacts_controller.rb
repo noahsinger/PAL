@@ -46,7 +46,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        Mailer.contact_email(@contact).deliver
+        Mailer.delay.contact_email(@contact)
         format.html { redirect_to(root_path, :notice => 'Your email has been sent.') }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else

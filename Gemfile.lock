@@ -1,3 +1,11 @@
+GIT
+  remote: http://github.com/collectiveidea/delayed_job.git
+  revision: aba9905764c2a13a110a272137d1ad9798fd55e0
+  specs:
+    delayed_job (2.1.0.pre2)
+      activesupport (~> 3.0)
+      daemons
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -35,6 +43,7 @@ GEM
     builder (2.1.2)
     compass (0.10.5)
       haml (>= 3.0.4)
+    daemons (1.1.0)
     declarative_authorization (0.5.1)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -86,6 +95,7 @@ DEPENDENCIES
   authlogic
   compass (>= 0.10.5)
   declarative_authorization
+  delayed_job!
   infinity_test
   paperclip
   rails (= 3.0.0)
