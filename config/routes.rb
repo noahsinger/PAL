@@ -1,4 +1,6 @@
 PAL::Application.routes.draw do
+  resources :subscribers
+
   resources :class_requests
 
   resources :contacts

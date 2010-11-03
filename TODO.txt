@@ -13,8 +13,8 @@ x locations
 	x geolocation
 	x google
 
-- class requests
-	- emails
+x class requests
+	x emails
 	
 - brands
 x albums
@@ -36,8 +36,8 @@ x photos
 
 - staff
 	- image upload
-- contacts
-	- email
+x contacts
+	x email
 - social data
 	- ???
 

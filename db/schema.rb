@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101028001903) do
+ActiveRecord::Schema.define(:version => 20101103224304) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -111,6 +111,13 @@ ActiveRecord::Schema.define(:version => 20101028001903) do
   create_table "sections", :force => true do |t|
     t.integer  "certification_id"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subscribers", :force => true do |t|
+    t.string   "email"
+    t.boolean  "verified"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,17 @@
+<h1>Newsletter Subscribers</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Verified</th>
+    <th></th>
+  </tr>
+
+<% @subscribers.each do |subscriber| %>
+  <tr>
+    <td><%= subscriber.email %></td>
+    <td><%= subscriber.verified %></td>
+    <td><%= link_to 'Destroy', subscriber, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

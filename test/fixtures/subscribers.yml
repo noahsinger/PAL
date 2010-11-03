@@ -1,0 +1,7 @@
+one:
+  email: testperson1@test.com
+  verified: true
+
+two:
+  email: testperson2@person.com
+  verified: false
