@@ -1,10 +1,12 @@
 PAL::Application.routes.draw do
-  resources :subscribers
-
+  resources :subscribers do
+    member do
+      get :verify
+    end
+  end
+  
   resources :class_requests
-
   resources :contacts
-
   resources :roles
 
   #get "user_sessions/new"
@@ -14,13 +16,9 @@ PAL::Application.routes.draw do
   match 'logout' => 'user_sessions#destroy'
   
   resources :user_sessions
-
   resources :users
-
   resources :locations
-
   resources :meetings
-
   resources :certification_levels
   
   # The priority is based upon order of creation:

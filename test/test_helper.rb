@@ -4,6 +4,8 @@ require 'rails/test_help'
 require "authlogic/test_case"
 require "declarative_authorization/maintenance"
 
+require 'digest/sha2'
+
 class ActiveSupport::TestCase
   include Authorization::TestHelper
   include Authorization::Maintenance

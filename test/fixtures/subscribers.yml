@@ -1,7 +1,11 @@
 one:
+  id: 1
   email: testperson1@test.com
   verified: true
+  code: <%= Digest::SHA256.hexdigest("subscriber1testperson1@test.com") %>
 
 two:
+  id: 2
   email: testperson2@person.com
-  verified: false
+  verified: 
+  code: <%= Digest::SHA256.hexdigest("subscriber2testperson2@person.com") %>

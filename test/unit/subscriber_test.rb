@@ -1,8 +1,14 @@
 require 'test_helper'
 
 class SubscriberTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "subscribers exist" do
+    assert_equal 2, Subscriber.count
+  end
+  
+  test "subscriber code" do
+    s = Subscriber.new :email => 'test@test.com'
+    s.save
+    
+    assert_equal Digest::SHA256.hexdigest("subscriber#{s.id}#{s.email}"), s.code
   end
 end

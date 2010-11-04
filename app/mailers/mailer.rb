@@ -10,4 +10,9 @@ class Mailer < ActionMailer::Base
     @class_request = class_request
     mail( :to => "development@diverpal.com", :from => class_request.from, :subject => "A new class request has been submitted" )
   end
+  
+  def subscriber_verification( subscriber )
+    @subscriber = subscriber
+    mail( :to => subscriber.email, :subject => 'Please Confirm Diverpal Newsletter Subscription')
+  end
 end
