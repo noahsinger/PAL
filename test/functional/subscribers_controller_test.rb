@@ -28,17 +28,18 @@ class SubscribersControllerTest < ActionController::TestCase
   end
   
   test "should be able to verify a subscriber" do
-    puts "\n-----------------------------------------------------------------------------"
+    # puts "\n-----------------------------------------------------------------------------"
+    # puts "verify subscriber"
     # puts "id is:     '#{subscribers(:two).id}'"
-    puts "should be: '#{Digest::SHA256.hexdigest("subscriber2testperson2@person.com")}'"
+    # puts "should be: '#{Digest::SHA256.hexdigest("subscriber2testperson2@person.com")}'"
     # puts "code is:   '#{subscribers(:two).code}'"
-    puts "-----------------------------------------------------------------------------"
+    # puts "-----------------------------------------------------------------------------"
     
-    get :verify, :id => 2, :code => Digest::SHA256.hexdigest("subscriber2testperson2@person.com")  #works only if subscribers(:two) has not been accessed in any way
-    # get :verify, :id => subscribers(:two).id, :code => Digest::SHA256.hexdigest("subscriber2testperson2@person.com")  #doesn't work
-    # get :verify, :id => subscribers(:two).id, :code => subscribers(:two).code  #doesn't work
-    
-    assert_equal true, subscribers(:two).verified
+    get :verify, :id => subscribers(:two).id, :code => subscribers(:two).code
+
+    assert_not_nil assigns(:subscriber)
+    # assert_equal true, subscribers(:two).verified #doesn't work because subscribers(:two) is always just the fixture data, not the actual in-memory copy of the subscriber that is being updated
+    assert_equal true, assigns(:subscriber).verified
     assert_redirected_to root_path
   end
 
