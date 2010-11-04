@@ -42,6 +42,14 @@ class SubscribersControllerTest < ActionController::TestCase
     assert_equal true, assigns(:subscriber).verified
     assert_redirected_to root_path
   end
+  
+  test "should not verify a subscriber if their code is wrong" do
+    get :verify, :id => subscribers(:two).id, :code => subscribers(:one).code
+    
+    assert_not_nil assigns(:subscriber)
+    assert_nil assigns(:subscriber).verified
+    assert_redirected_to root_path
+  end
 
   test "admin should destroy subscriber" do
     login_as_admin
