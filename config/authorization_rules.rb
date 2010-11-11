@@ -9,6 +9,8 @@ authorization do
     has_permission_on [:locations], :to => [:index, :show, :new, :create, :edit, :update, :destroy]
     has_permission_on [:contacts], :to => [:index, :show, :edit, :update, :destroy]
     has_permission_on [:subscribers], :to => [:index, :create, :verify, :destroy]
+    has_permission_on [:newsletters], :to => [:index, :view, :show, :create, :destroy]
+    has_permission_on [:newsletter_sections], :to => [:reorder, :new, :create, :edit, :update, :destroy]
   end
 
   role :guest do
@@ -17,5 +19,7 @@ authorization do
     has_permission_on [:photos], :to => [:index]
     has_permission_on [:contacts], :to => [:new,:create]
     has_permission_on [:subscribers], :to => [:create, :verify]
+    has_permission_on [:newsletters], :to => [:index, :view]
+    # has_permission_on [:newsletter_sections], :to => []
   end
 end

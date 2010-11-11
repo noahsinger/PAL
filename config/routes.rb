@@ -1,4 +1,16 @@
 PAL::Application.routes.draw do
+  resources :newsletters do
+    member do
+      get :view
+    end
+    
+    resources :newsletter_sections do
+      collection do
+        get :reorder
+      end
+    end
+  end
+
   resources :subscribers do
     member do
       get :verify
@@ -9,7 +21,6 @@ PAL::Application.routes.draw do
   resources :contacts
   resources :roles
 
-  #get "user_sessions/new"
   get "home/index"
   get "home/template"
 

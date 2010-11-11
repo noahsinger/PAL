@@ -1,0 +1,28 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: Test Section 1
+  content: This is the content
+  image_file_name: DSC9000.jpg
+  image_file_size: 12345
+  image_content_type: image/jpeg
+  position:
+  newsletter_id: 1
+
+two:
+  title: Test Section 2
+  content: This is the content
+  image_file_name: DSC9001.jpg
+  image_file_size: 12346
+  image_content_type: image/jpeg
+  position:
+  newsletter_id: 1
+  
+three:
+  title: Test Section 3
+  content: This is the content
+  image_file_name:
+  image_file_size:
+  image_content_type:
+  position:
+  newsletter_id: 1
