@@ -580,164 +580,168 @@ header #header_forms form input {
   font-size: 2em;
   padding: 20px;
 }
-/* line 476, ../../app/stylesheets/partials/_960.scss */
+/* line 473, ../../app/stylesheets/partials/_960.scss */
+#content article section p:nth-child(2) {
+  padding-bottom: 0px;
+}
+/* line 480, ../../app/stylesheets/partials/_960.scss */
 #content article section p img {
   float: right;
   padding: 0px 0px 10px 20px;
 }
-/* line 492, ../../app/stylesheets/partials/_960.scss */
+/* line 496, ../../app/stylesheets/partials/_960.scss */
 #content div.admin {
   color: #ffff66;
 }
-/* line 496, ../../app/stylesheets/partials/_960.scss */
+/* line 500, ../../app/stylesheets/partials/_960.scss */
 #content div.admin h1 {
   border-top: 2px solid #ffff66;
   padding-bottom: 20px;
   margin-bottom: 10px;
 }
-/* line 502, ../../app/stylesheets/partials/_960.scss */
+/* line 506, ../../app/stylesheets/partials/_960.scss */
 #content div.admin a {
   color: #ffff66;
   font-weight: bold;
 }
-/* line 508, ../../app/stylesheets/partials/_960.scss */
+/* line 512, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are {
   color: #69C7DE;
 }
-/* line 511, ../../app/stylesheets/partials/_960.scss */
+/* line 515, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are h1 {
   border-top: 2px solid #69C7DE;
   padding-bottom: 20px;
 }
-/* line 516, ../../app/stylesheets/partials/_960.scss */
+/* line 520, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are img {
   padding: 10px;
   background-color: #fff;
 }
-/* line 521, ../../app/stylesheets/partials/_960.scss */
+/* line 525, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are h2 {
   font-size: 15px;
 }
-/* line 525, ../../app/stylesheets/partials/_960.scss */
+/* line 529, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are p {
   font-size: 12px;
   font-style: italic;
   padding-bottom: 20px;
 }
-/* line 531, ../../app/stylesheets/partials/_960.scss */
+/* line 535, ../../app/stylesheets/partials/_960.scss */
 #content .who_we_are a {
   color: #69C7DE;
   font-weight: bold;
 }
-/* line 539, ../../app/stylesheets/partials/_960.scss */
+/* line 543, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] h1 {
   display: none;
 }
-/* line 543, ../../app/stylesheets/partials/_960.scss */
+/* line 547, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] p {
   padding: 0;
   color: #ccc;
   font-size: 11px;
   background: none;
 }
-/* line 567, ../../app/stylesheets/partials/_960.scss */
+/* line 571, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] p[itemprop="address"] span[itemprop="country-name"] {
   display: none;
 }
-/* line 576, ../../app/stylesheets/partials/_960.scss */
+/* line 580, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] a[itemprop="url"] {
   display: none;
 }
-/* line 580, ../../app/stylesheets/partials/_960.scss */
+/* line 584, ../../app/stylesheets/partials/_960.scss */
 #content .contact_us article[itemtype="http://data-vocabulary.org/Organization"] .links a {
   display: none;
   color: #69C7DE;
   font-weight: bold;
   text-decoration: none;
 }
-/* line 589, ../../app/stylesheets/partials/_960.scss */
+/* line 593, ../../app/stylesheets/partials/_960.scss */
 #content .certifications {
   color: #2FC344;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* line 594, ../../app/stylesheets/partials/_960.scss */
+/* line 598, ../../app/stylesheets/partials/_960.scss */
 #content .certifications h1 {
   color: #2FC344;
   border-top: 2px solid #2FC344;
   padding-bottom: 20px;
 }
-/* line 600, ../../app/stylesheets/partials/_960.scss */
+/* line 604, ../../app/stylesheets/partials/_960.scss */
 #content .certifications ul {
   list-style: none;
   margin: 0;
 }
-/* line 605, ../../app/stylesheets/partials/_960.scss */
+/* line 609, ../../app/stylesheets/partials/_960.scss */
 #content .certifications ul li a {
   text-decoration: none;
 }
-/* line 611, ../../app/stylesheets/partials/_960.scss */
+/* line 615, ../../app/stylesheets/partials/_960.scss */
 #content .certifications a {
   color: #2FC344;
 }
-/* line 616, ../../app/stylesheets/partials/_960.scss */
+/* line 620, ../../app/stylesheets/partials/_960.scss */
 #content .media {
   color: #2FC344;
   margin-bottom: 20px;
 }
-/* line 620, ../../app/stylesheets/partials/_960.scss */
+/* line 624, ../../app/stylesheets/partials/_960.scss */
 #content .media h1 {
   color: #2FC344;
   border-top: 2px solid #2FC344;
   padding-bottom: 20px;
 }
-/* line 626, ../../app/stylesheets/partials/_960.scss */
+/* line 630, ../../app/stylesheets/partials/_960.scss */
 #content .media h2 {
   font-size: 15px;
   padding-bottom: 10px;
 }
-/* line 631, ../../app/stylesheets/partials/_960.scss */
+/* line 635, ../../app/stylesheets/partials/_960.scss */
 #content .media img {
   padding: 10px;
   background-color: #fff;
 }
-/* line 636, ../../app/stylesheets/partials/_960.scss */
+/* line 640, ../../app/stylesheets/partials/_960.scss */
 #content .media p {
   font-size: 12px;
   font-style: italic;
 }
-/* line 641, ../../app/stylesheets/partials/_960.scss */
+/* line 645, ../../app/stylesheets/partials/_960.scss */
 #content .media p.description {
   display: none;
 }
-/* line 645, ../../app/stylesheets/partials/_960.scss */
+/* line 649, ../../app/stylesheets/partials/_960.scss */
 #content .media a {
   color: #2FC344;
 }
 
-/* line 651, ../../app/stylesheets/partials/_960.scss */
+/* line 655, ../../app/stylesheets/partials/_960.scss */
 footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 655, ../../app/stylesheets/partials/_960.scss */
+/* line 659, ../../app/stylesheets/partials/_960.scss */
 footer h1 {
   color: #996600;
   font-family: 'ChunkFiveRegular', Arial, sans-serif;
 }
-/* line 660, ../../app/stylesheets/partials/_960.scss */
+/* line 664, ../../app/stylesheets/partials/_960.scss */
 footer ul {
   list-style: none;
 }
-/* line 663, ../../app/stylesheets/partials/_960.scss */
+/* line 667, ../../app/stylesheets/partials/_960.scss */
 footer ul li {
   padding-bottom: 5px;
 }
-/* line 666, ../../app/stylesheets/partials/_960.scss */
+/* line 670, ../../app/stylesheets/partials/_960.scss */
 footer ul li a {
   text-decoration: none;
 }
-/* line 672, ../../app/stylesheets/partials/_960.scss */
+/* line 676, ../../app/stylesheets/partials/_960.scss */
 footer #copyright {
   margin-top: -55px;
   font-size: 12px;

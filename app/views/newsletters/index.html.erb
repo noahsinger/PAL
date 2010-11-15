@@ -13,7 +13,13 @@
 <% @newsletters.each do |newsletter| %>
   <tr>
 		<td><%= link_to newsletter.created_at.strftime( '%B %Y' ), view_newsletter_path( newsletter ) %></td>
-    <td><%= newsletter.sent_on %></td>
+    <td>
+			<% unless newsletter.sent_on == nil %>
+				<%= newsletter.sent_on %>
+			<% else %>
+				never
+			<% end %>
+		</td>
 		<% if permitted_to? :show %>
     	<td><%= link_to 'Edit', newsletter %></td>
     	<td><%= link_to 'Destroy', newsletter, :confirm => 'Are you sure?', :method => :delete %></td>

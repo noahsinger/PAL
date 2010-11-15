@@ -13,10 +13,11 @@
 	<% @newsletter.newsletter_sections.each do |section| %>
 		<section>
 			<header><h2><%= section.title %></h2></header>
-			<% unless section.image_file_name.blank? %>
-				<p><%= image_tag( section.image.url(:default), :class => 'image' ) %></p>
-			<% end %>
-			
+			<p>
+				<% unless section.image_file_name.blank? %>
+					<%= image_tag( section.image.url(:default), :class => 'image' ) %>
+				<% end %>
+			</p>
 			<%= raw(textilize( section.content )) %>
 			
 			<p>
