@@ -64,6 +64,12 @@
 		}
 	}
 	
+	//newsletters
+	article section header {
+		@include column( 7 );
+	}
+	/////////////
+	
 	#pos2 {
 		@include prepend(2);
 		@include column(2, last);

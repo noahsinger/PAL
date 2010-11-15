@@ -2,7 +2,11 @@
 
 <p>
   <b>Sent on:</b>
-  <%= @newsletter.sent_on %>
+	<% unless @newsletter.sent_on == nil %>
+  	<%= @newsletter.sent_on %>
+	<% else %>
+		never sent
+	<% end %>
 </p>
 
 <article>
@@ -10,14 +14,25 @@
 		<section>
 			<header><h2><%= section.title %></h2></header>
 			<% unless section.image_file_name.blank? %>
-				<%= image_tag section.image.url(:default) %>
+				<p><%= image_tag( section.image.url(:default), :class => 'image' ) %></p>
 			<% end %>
 			
 			<%= raw(textilize( section.content )) %>
+			
+			<p>
+				<%= link_to 'Edit', edit_newsletter_newsletter_section_path(@newsletter,section) %>
+				<%= link_to 'Destroy', [@newsletter,section], :method => :delete, :confirm => 'Are you sure?' %>
+			</p>
 		</section>
 	<% end %>
 </article>
 
-<%= link_to 'New Section', new_newsletter_newsletter_section_path(@newsletter) %> |
-<%= link_to 'Reorder Sections', reorder_newsletter_newsletter_sections_path(@newsletter) %> |
-<%= link_to 'Back', newsletters_path %>
+<% content_for :pos2 do %>
+	<div class="admin">
+		<h1>Admin</h1>
+		<%= link_to 'New Section', new_newsletter_newsletter_section_path(@newsletter) %>
+		<%= link_to 'Reorder Sections', reorder_newsletter_newsletter_sections_path(@newsletter) %>
+		<%= link_to 'Back', newsletters_path %>
+	</div>
+<% end %>
+

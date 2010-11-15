@@ -23,25 +23,10 @@
 </table>
 
 <% if permitted_to? :create %>
-	<%= link_to 'New Newsletter', newsletters_path, :method => :post %>
+	<% content_for :pos2 do %>
+		<div class="admin">
+			<h1>Admin</h1>
+			<%= link_to 'New Newsletter', newsletters_path, :method => :post %>
+		</div>
+	<% end %>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
