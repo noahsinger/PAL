@@ -187,6 +187,12 @@ footer {
 					@include column(5, last);
 				}
 			}
+			
+			//newsletters
+			article section header {
+				@include column( 5 );
+			}
+			/////////////
 		}
 
 		#pos2 {
@@ -308,6 +314,12 @@ footer {
 					@include column(5, last);
 				}
 			}
+			
+			//newsletters
+			article section header {
+				@include column( 5 );
+			}
+			/////////////
 		}
 
 		#pos2 {
