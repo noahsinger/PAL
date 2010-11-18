@@ -1,1 +1,30 @@
-reorder page
+<%= content_for :head do %>
+	<%= javascript_include_tag 'jquery-ui-1.8.6.custom.min' %>
+	
+	<script type="text/javascript">
+			// jQuery.ajaxSetup({ 
+			//   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+			// });
+	
+			$(function() {
+				$("#newsletter_sections").sortable({ 
+					// placeholder: 'ui-state-highlight', 
+					stop: function( event, ui ) { 
+						$.ajax({
+							type: "POST",
+							url: "<%= sort_newsletter_newsletter_sections_url( :newsletter_id => @newsletter ) %>",
+							// processData: false,
+							data: $(this).sortable('serialize') + '&authenticity_token=' + encodeURIComponent("<%= form_authenticity_token %>") //,
+							// dataType: "script"
+						}) //end ajax call
+					} //end stop function
+				}) //end sortable
+			}); //end function
+	</script>
+<% end %>
+
+<ul id="newsletter_sections">
+	<% @newsletter_sections.each do |section| %>
+		<li id="section_<%= section.id %>"><h1><%= section.title %> (<%= section.position %>)</h1></li>
+	<% end %>
+</ul>

@@ -1,5 +1,5 @@
 class NewsletterSectionsController < ApplicationController
-  filter_resource_access :additional_collection => [:reorder]
+  filter_resource_access :additional_collection => [:reorder, :sort]
   
   before_filter :load_newsletter
   
@@ -25,6 +25,37 @@ class NewsletterSectionsController < ApplicationController
   
   def reorder
     @newsletter_sections = @newsletter.newsletter_sections.all
+  end
+  
+  def sort
+    puts "******************************"
+    puts "Original"
+    @newsletter.newsletter_sections.each do |section|
+      puts "#{section.title} #{section.position}"
+    end
+    puts "******************************"
+    
+    sections = @newsletter.newsletter_sections.values_at( *params[:section].map{|s| s.to_i - 1} )
+    
+    puts "******************************"
+    puts "Reordered"
+    sections.each do |section|
+      puts "#{section.title} #{section.position}"
+    end
+    puts "******************************"
+    
+    # position = 0
+    # sections.each do | section | 
+    #   # puts "******************************"
+    #   # puts "reording sections title: #{section.title}, position: #{position}" 
+    #   # puts "******************************"
+    #   section.position = (position += 1)
+    #   section.save
+    # end
+    
+    respond_to do |format|
+      format.js {render :nothing => true}
+    end
   end
 
   # POST /newsletter_sections

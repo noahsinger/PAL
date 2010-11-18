@@ -10,7 +10,7 @@ authorization do
     has_permission_on [:contacts], :to => [:index, :show, :edit, :update, :destroy]
     has_permission_on [:subscribers], :to => [:index, :create, :verify, :destroy]
     has_permission_on [:newsletters], :to => [:index, :view, :show, :create, :destroy]
-    has_permission_on [:newsletter_sections], :to => [:reorder, :new, :create, :edit, :update, :destroy]
+    has_permission_on [:newsletter_sections], :to => [:sort, :reorder, :new, :create, :edit, :update, :destroy]
   end
 
   role :guest do
