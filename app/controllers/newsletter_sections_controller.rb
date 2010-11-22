@@ -31,27 +31,31 @@ class NewsletterSectionsController < ApplicationController
     puts "******************************"
     puts "Original"
     @newsletter.newsletter_sections.each do |section|
-      puts "#{section.title} #{section.position}"
+      puts "#{section.title} pos:#{section.position} (id:#{section.id})"
     end
+    puts "sections: #{params[:section].map{|s| s.to_i}}"
     puts "******************************"
     
-    sections = @newsletter.newsletter_sections.values_at( *params[:section].map{|s| s.to_i - 1} )
+    # sections = @newsletter.newsletter_sections.values_at( *params[:section].map{|s| s.to_i - 1} ) #getting by index, not id!
+    # sections = @newsletter.newsletter_sections.find(*params[:section].map{|s| s.to_i}) #doesn't return in the args order!
+    
+    sections = params[:section].map{|id| @newsletter.newsletter_sections.find( id )} #works but hits the DB for each move
     
     puts "******************************"
     puts "Reordered"
     sections.each do |section|
-      puts "#{section.title} #{section.position}"
+      puts "#{section.title} pos:#{section.position} (id:#{section.id})"
     end
     puts "******************************"
     
-    # position = 0
-    # sections.each do | section | 
-    #   # puts "******************************"
-    #   # puts "reording sections title: #{section.title}, position: #{position}" 
-    #   # puts "******************************"
-    #   section.position = (position += 1)
-    #   section.save
-    # end
+    position = 0
+    sections.each do | section | 
+      puts "******************************"
+      puts "reording sections title: #{section.title}, position: #{position}, (id: #{section.id})" 
+      puts "******************************"
+      section.position = (position += 1)
+      section.save
+    end
     
     respond_to do |format|
       format.js {render :nothing => true}

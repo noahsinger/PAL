@@ -25,6 +25,15 @@
 
 <ul id="newsletter_sections">
 	<% @newsletter_sections.each do |section| %>
-		<li id="section_<%= section.id %>"><h1><%= section.title %> (<%= section.position %>)</h1></li>
+		<li id="section_<%= section.id %>"><p><%= section.title %> pos: <%= section.position %> (id: <%= section.id %>)</p></li>
 	<% end %>
 </ul>
+
+<% if permitted_to? :reorder %>
+	<% content_for :pos2 do %>
+		<div class="admin">
+			<h1>Admin</h1>
+			<%= link_to 'Back', newsletter_path(@newsletter) %>
+		</div>
+	<% end %>
+<% end %>
