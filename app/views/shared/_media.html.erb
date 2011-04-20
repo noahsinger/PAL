@@ -2,8 +2,10 @@
 
 <div class="media">
 	<h1>Media</h1>
-	<p><%= image_tag photo.image.url, :width => 90 %></p>
-	<h2><%= photo.title %></h2>
-	<p class="description"><%= photo.description %></p>
+	<% if photo %>
+		<p><%= image_tag photo.image.url, :width => 90 %></p>
+		<h2><%= photo.title %></h2>
+		<p class="description"><%= photo.description %></p>
+	<% end %>
 	<p><%= link_to 'Photo Albums', albums_path %></p>
 </div>
